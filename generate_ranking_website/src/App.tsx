@@ -105,7 +105,7 @@ function LeaderboardItem(
         return (
             <div className='w-full h-fit'>
                 <div className='border-t h-fit float-left bg-gray-900 w-1/5 text-center'>{rank}</div>
-                <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center'>{item.username}</div>
+                <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center overflow-hidden text-ellipsis truncate'>{item.username}</div>
                 <div className='border-t h-fit float-left bg-gray-900 pl-2 pr-2 w-1/5 text-center'>{item.elo.toFixed(2)}</div>
                 <div className='border-t h-fit float-left bg-gray-700 w-1/5 text-center'>{item.region}</div>
                 <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center'>{item.slug}</div>
@@ -117,7 +117,7 @@ function LeaderboardItem(
             return (
                 <div className='w-full h-fit'>
                     <div className='border-t h-fit float-left bg-gray-900 w-1/5 text-center'>{rank}</div>
-                    <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center overflow-clip text-ellipsis'>{item.username}</div>
+                    <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center overflow-hidden text-ellipsis truncate'>{item.username}</div>
                     <div className='border-t h-fit float-left bg-gray-900 pl-2 pr-2 w-1/5 text-center'>{item.elo.toFixed(2)}</div>
                     <div className='border-t h-fit float-left bg-gray-700 w-1/5 text-center'>{item.region}</div>
                     <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center'>{item.slug}</div>
