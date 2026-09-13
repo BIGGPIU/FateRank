@@ -23,6 +23,10 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    defaults:
+      run:
+        working-directory: ./generate_ranking_website
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,10 +40,8 @@ jobs:
           node-version: lts/*
           cache: 'npm'
       - name: Install dependencies
-        working-directory: ./generate_ranking_website
         run: npm ci
       - name: Build
-        working-directory: ./generate_ranking_website
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
