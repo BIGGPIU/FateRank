@@ -1,0 +1,67 @@
+# Depreceated because it doesnt really make sense
+# Total Compexity: 1(7 + 35(2 + 2(10 + 3))) = 987 objects
+query GetTournamentInfo($TournamentPage:Int,$SetPage:Int) {
+  tournaments(query: {
+    page: $TournamentPage,
+    perPage: 1, 
+    filter: 
+    	{
+        videogameIds: [1144]
+#         JAN 1 MIDNIGHT 2026. UPDATE EVERY YEAR
+        afterDate: 1767225600
+      }
+    sort:startAt
+  }
+  ) {
+    pageInfo {
+      page
+      totalPages
+    }
+    nodes {
+      id
+      name
+      events(
+        # Tournaments gotta make a new page after 1/2 year. So like after three seasons. Handle outliers when they show up
+        # (this should only be a problem for NMF)
+        limit: 35
+        filter: {
+          videogameId: [1144]
+        }
+      ) {
+        id
+        state
+        sets(
+          page:$SetPage
+          perPage:2,
+          sortType:RECENT,
+          filters:{
+            showByes:false
+          }
+        ) {
+          pageInfo {
+            totalPages
+            page
+          }
+          nodes {
+            id
+            slots(
+              includeByes:false
+            ) {
+              standing {
+                placement
+                entrant {
+                  participants {
+                    user {
+                      id
+                      slug
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

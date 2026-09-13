@@ -1,0 +1,16 @@
+# Please call me when someone manages to run an event for ... (calculator work) FOUR FUCKING YEARS
+query GetEvents($TournamentId:ID) {
+    tournament(
+        id: $TournamentId
+    ) {
+        events (
+            limit:256
+            filter: {
+              videogameId:[1144]
+            }
+        ) {
+            id
+            state
+        }
+    }
+}

@@ -1,0 +1,10 @@
+query GetTournamentAmount {
+  tournaments(
+    query: {page: 1, perPage: 1, filter: {videogameIds: [1144], afterDate: 1767225600}, sort: startAt}
+  ) {
+    pageInfo {
+      page
+      totalPages
+    }
+  }
+}

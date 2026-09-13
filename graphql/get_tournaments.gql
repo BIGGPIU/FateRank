@@ -1,0 +1,22 @@
+query GetTournaments($TournamentPage:Int) {
+    tournaments(query: {
+    page: $TournamentPage,
+    perPage: 256, 
+    filter: 
+    	{
+        videogameIds: [1144]
+        afterDate: 1767225600
+      }
+    sort:startAt
+  })
+  {
+    pageInfo {
+        page
+        totalPages
+    }
+  	nodes {
+      id
+      name
+  	}
+  }
+}

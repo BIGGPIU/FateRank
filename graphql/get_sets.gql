@@ -1,0 +1,34 @@
+query GetSets($EventId: ID, $Page: Int) {
+    event(id: $EventId) {
+        sets (
+            page:$Page,
+            perPage:64,
+            sortType: RECENT,
+            filters: {
+                showByes:false
+            }
+        ) {
+            pageInfo {
+                totalPages
+            }
+            nodes {
+                slots (
+                    includeByes:false
+                ) {
+                    standing {
+                        placement
+                        entrant {
+                            participants {
+                                user {
+                                    id
+                                    slug
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
