@@ -5,5 +5,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
-  base:"https://biggpiu.github.io/tier-assist"
+  base:"https://biggpiu.github.io/FateRank"
 })
