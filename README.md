@@ -45,5 +45,5 @@ then whenever you run a new commit you'll have a brand new website with your own
 
 # AI Disclosure
 
-Because I know most of you probably care, The only file that was created with AI was `vibe_coded.rs`. Where it was used to countries to region tags. 
+Because I know most of you probably care, The only file that was created with AI was `vibe_coded.rs`. Where it was used to turn countries to region tags. 
 
