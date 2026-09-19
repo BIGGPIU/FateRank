@@ -15,6 +15,7 @@ interface UserRatingItem {
     elo:number,
     region:string,
     slug:string,
+    confidence:number
 }
 
 export const rating_list:Array<UserRatingItem> = [
@@ -30,7 +31,8 @@ for i in hold:
             username: "{i[5]}",
             elo: {i[2]},
             region: "{i[6]}",
-            slug: "{i[7]}"
+            slug: "{i[7]}",
+            confidence: {(i[8])}
         }},
 
     """

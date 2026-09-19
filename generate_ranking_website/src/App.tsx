@@ -9,14 +9,20 @@ function App() {
 
 
     return (
-        <div className='w-full h-full absolute bg-gray-950 p-4 overflow-scroll'>
-            <a className='absolute left-0 top-0 text-white underline' href='https://biggpiu.github.io'>
+        <div className='w-full h-full absolute bg-gray-950 lg:p-4 overflow-scroll'>
+            <a className='absolute left-0 top-0 text-white underline hidden lg:block' href='https://biggpiu.github.io'>
                 By BIGG_PIU aka Worst T.O
             </a>
+            <a className='absolute right-0 top-0 text-white underline hidden lg:block' href='https://biggpiu.github.io/FateRankChangelog'>
+                Changelog
+            </a>
             <div className='text-2xl text-white text-center mb-4'>
-                FateRank v1.00
+                FateRank v1.1.0
             </div>
-            <textarea name="" id="" className='left-1/2 -translate-x-1/2 relative bg-white text-black w-lg h-32' placeholder='Filter by Slug (Split by Newlines)' 
+            <div className='text-md text-white text-center mb-4'>
+                THIS TOOL IS A WORK AND PROGRESS AND NOT 100% ACCURATE. PLEASE VERIFY RESULTS
+            </div>
+            <textarea name="" id="" className='left-1/2 -translate-x-1/2 relative bg-white text-black lg:w-lg w-full h-32' placeholder='Filter by Slug (Split by Newlines)' 
             onChange={(v) => {
                 
 
@@ -66,7 +72,7 @@ function Leaderboard(
     }
 
     return (
-        <div className='w-3/4 h-fit bg-gray-800 left-1/2 -translate-x-1/2 relative'>
+        <div className='lg:w-3/4 w-full h-fit bg-gray-800 left-1/2 -translate-x-1/2 relative'>
             <LeaderboardHeader></LeaderboardHeader>  
             {x}      
         </div>
@@ -78,11 +84,11 @@ function LeaderboardHeader() {
 
     return (
         <div className='w-full h-fit'>
-            <div className='h-fit float-left bg-gray-900 w-1/5 text-center'>Ranking</div>
+            <div className='h-fit float-left bg-gray-900 w-1/5 text-center'><div className='inline-block'>Ranking</div> <div className='text-xs lg:inline-block hidden'>Confidence</div></div>
             <div className='h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center'>Username</div>
             <div className='h-fit float-left bg-gray-900 pl-2 pr-2 w-1/5 text-center'>ELO</div>
-            <div className='h-fit float-left bg-gray-700 w-1/5 text-center'>Region</div>
-            <div className='h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center'>Slug</div>
+            <div className='h-fit float-left bg-gray-700 w-1/5 hidden lg:block text-center'>Region</div>
+            <div className='h-fit float-left bg-gray-700 lg:bg-gray-900 pl-2 pr-2 lg:w-1/5 w-2/5 text-center'>Slug</div>
         </div>
     )
 }
@@ -104,11 +110,14 @@ function LeaderboardItem(
     if (filter_list.length == 0) {
         return (
             <div className='w-full h-fit'>
-                <div className='border-t h-fit float-left bg-gray-900 w-1/5 text-center'>{rank}</div>
+                <div className='border-t h-fit float-left bg-gray-900 w-1/5 text-center'>
+                    <div className='inline-block'>{rank}</div>
+                    <ConfidenceText conf={item.confidence}></ConfidenceText>
+                </div>
                 <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center overflow-hidden text-ellipsis truncate'>{item.username}</div>
                 <div className='border-t h-fit float-left bg-gray-900 pl-2 pr-2 w-1/5 text-center'>{item.elo.toFixed(2)}</div>
-                <div className='border-t h-fit float-left bg-gray-700 w-1/5 text-center'>{item.region}</div>
-                <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center'>{item.slug}</div>
+                <div className='border-t h-fit float-left bg-gray-700 w-1/5 hidden lg:block text-center'>{item.region}</div>
+                <div className='border-t h-fit float-left bg-gray-700 lg:bg-gray-900 pl-2 pr-2 lg:w-1/5 w-2/5 text-center'>{item.slug}</div>
             </div>
         )
     }
@@ -116,11 +125,14 @@ function LeaderboardItem(
         if (filter_list.includes(item.slug)) {
             return (
                 <div className='w-full h-fit'>
-                    <div className='border-t h-fit float-left bg-gray-900 w-1/5 text-center'>{rank}</div>
+                    <div className='border-t h-fit float-left bg-gray-900 w-1/5 text-center'>
+                        <div className='inline-block'>{rank}</div>
+                        <ConfidenceText conf={item.confidence}></ConfidenceText>
+                    </div>
                     <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center overflow-hidden text-ellipsis truncate'>{item.username}</div>
                     <div className='border-t h-fit float-left bg-gray-900 pl-2 pr-2 w-1/5 text-center'>{item.elo.toFixed(2)}</div>
-                    <div className='border-t h-fit float-left bg-gray-700 w-1/5 text-center'>{item.region}</div>
-                    <div className='border-t h-fit float-left bg-gray-700 pl-2 pr-2 w-1/5 text-center'>{item.slug}</div>
+                    <div className='border-t h-fit float-left bg-gray-700 w-1/5 hidden lg:block text-center'>{item.region}</div>
+                    <div className='border-t h-fit float-left bg-gray-700 lg:bg-gray-900 pl-2 pr-2 lg:w-1/5 w-2/5 text-center'>{item.slug}</div>
                 </div>
             )
         }
@@ -133,6 +145,18 @@ function LeaderboardItem(
         }
     }
 
+}
+
+function ConfidenceText({conf}:{conf:number}) {
+    if (conf >= 50) {
+        return <div className='text-xs inline-block text-white ml-1 w-6'>{conf}%</div>
+    }
+    else if (conf >= 25) {
+        return <div className='text-xs inline-block text-yellow-300 ml-1 w-6'>{conf}%</div>
+    }
+    else {
+        return <div className='text-xs inline-block text-red-500 ml-1 w-6'>{conf}%</div>
+    }
 }
 
 export default App

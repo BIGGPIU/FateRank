@@ -2,7 +2,7 @@ use std::{sync::{Arc, Mutex}, time::Duration};
 
 use json::{JsonValue, object};
 
-use crate::{auth, constants::MAX_REQUESTS_PER_MINUTE, json_structs::{self}, vibe_coded};
+use crate::{auth, constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, json_structs::{self}, vibe_coded};
 
 
 
@@ -14,6 +14,7 @@ pub struct TournamentSetStanding {
     // true if they won, false if they lost
     pub id:i64,
     pub has_won:bool,
+    pub score:i64,
 }
 
 #[derive(Debug)]
@@ -62,7 +63,7 @@ impl StartGG {
     }
 
     pub async fn get_all_tournaments(&self) -> Vec<Tournament>  {
-        // as of 9/7/2026 there are only 134 bbtag tournaments, it stands to reason that there probably wont be too many more
+        // as of 9/7/2026 there are only 134 bbtag tournaments, it stands to reason that there probably wont be too many more (more than 256)
         let mut v = Vec::with_capacity(200);
         let mut requests = 0;
 
@@ -73,6 +74,8 @@ impl StartGG {
             .body(
                 object! {
                     "query": "query GetTournaments($TournamentPage:Int) {tournaments(query: {page: $TournamentPage,perPage: 256,filter: { videogameIds: [1144]afterDate: 1767225600} sort:startAt}) { pageInfo { page totalPages } nodes { id name } } }",
+                    // Debug query V | Real query ^
+                    // "query": "query GetTournaments($TournamentPage:Int) {tournaments(query: {page: $TournamentPage,perPage: 9,filter: { videogameIds: [1144]afterDate: 1767225600} sort:startAt}) { pageInfo { page totalPages } nodes { id name } } }",
                     "TournamentPage":1,
                 }.dump()
             )
@@ -101,7 +104,7 @@ impl StartGG {
             )
         }
 
-        if r["data"]["tournaments"]["pageInfo"]["totalPages"].as_i32().unwrap() != 1 {
+        if r["data"]["tournaments"]["pageInfo"]["totalPages"].as_i32().unwrap() != 1  && false{
             for p in 2..r["data"]["tournaments"]["pageInfo"]["totalPages"].as_i32().unwrap() {
 
 
@@ -111,7 +114,7 @@ impl StartGG {
 
                 if requests >= MAX_REQUESTS_PER_MINUTE as i32 {
                     println!("Sleeping to avoid rate limit...");
-                    tokio::time::sleep(Duration::from_mins(1)).await;
+                    tokio::time::sleep(STARTGG_WAIT_TIME).await;
                     println!("done");
                     requests = 0;
                 }
@@ -164,7 +167,7 @@ impl StartGG {
 
         if *requests >= MAX_REQUESTS_PER_MINUTE as i32 {
             println!("Sleeping to avoid rate limit...");
-            tokio::time::sleep(Duration::from_mins(1)).await;
+            tokio::time::sleep(STARTGG_WAIT_TIME).await;
             println!("done");
             *requests = 0;
         }
@@ -222,7 +225,7 @@ impl StartGG {
 
         if *requests >= MAX_REQUESTS_PER_MINUTE as i32 {
             println!("Sleeping to avoid rate limit...");
-            tokio::time::sleep(Duration::from_mins(1)).await;
+            tokio::time::sleep(STARTGG_WAIT_TIME).await;
             println!("done");
             *requests = 0;
         }
@@ -234,7 +237,7 @@ impl StartGG {
             )
             .body(
                 object! {
-                    "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) {sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { slots ( includeByes:false ) { standing { placement entrant { participants { user { id slug } } } } } } } } }",
+                    "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) { sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { slots ( includeByes:false ) { standing { placement stats { score { value } } entrant { participants { user { id slug } } } } } } } } }",
                     "variables":{
                         "EventId": event_id,
                         "Page":1
@@ -265,6 +268,13 @@ impl StartGG {
             if let None = set["slots"][1]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64() {
                 continue;
             }
+            // I think this means there was a DQ
+            if let None = set["slots"][0]["standing"]["stats"]["score"]["value"].as_i64() {
+                continue;
+            }
+            if let None = set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64() {
+                continue;
+            }
 
             v.push(
                 TournamentSet {
@@ -272,10 +282,12 @@ impl StartGG {
                         TournamentSetStanding {
                             id: set["slots"][0]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64().unwrap(),
                             has_won: set["slots"][0]["standing"]["placement"].as_i64().unwrap() == 1,
+                            score: set["slots"][0]["standing"]["stats"]["score"]["value"].as_i64().unwrap(),
                         },
                         TournamentSetStanding {
                             id: set["slots"][1]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64().unwrap(),
                             has_won: set["slots"][1]["standing"]["placement"].as_i64().unwrap() == 1,
+                            score: set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64().unwrap(),
                         }
                     ],
                 }
@@ -291,7 +303,7 @@ impl StartGG {
 
                 if *requests >= MAX_REQUESTS_PER_MINUTE as i32 {
                     println!("Sleeping to avoid rate limit...");
-                    tokio::time::sleep(Duration::from_mins(1)).await;
+                    tokio::time::sleep(STARTGG_WAIT_TIME).await;
                     println!("done");
                     *requests = 0;
                 }
@@ -302,7 +314,7 @@ impl StartGG {
                     )
                     .body(
                         object! {
-                            "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) {sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { slots ( includeByes:false ) { standing { placement entrant { participants { user { id slug } } } } } } } } }",
+                            "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) { sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { slots ( includeByes:false ) { standing { placement stats { score { value } } entrant { participants { user { id slug } } } } } } } } }",
                             "variables": {
                                 "EventId": event_id,
                                 "Page":page
@@ -330,6 +342,13 @@ impl StartGG {
                     if let None = set["slots"][1]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64() {
                         continue;
                     }
+                    if let None = set["slots"][0]["standing"]["stats"]["score"]["value"].as_i64() {
+                        // I think this means there was a DQ
+                        continue;
+                    }
+                    if let None = set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64() {
+                        continue;
+                    }
                     
                     v.push(
                         TournamentSet {
@@ -337,14 +356,17 @@ impl StartGG {
                                 TournamentSetStanding {
                                     id: set["slots"][0]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64().unwrap(),
                                     has_won: set["slots"][0]["standing"]["placement"].as_i64().unwrap() == 1,
+                                    score: set["slots"][0]["standing"]["stats"]["score"]["value"].as_i64().unwrap()
                                 },
                                 TournamentSetStanding {
                                     id: set["slots"][1]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64().unwrap(),
                                     has_won: set["slots"][1]["standing"]["placement"].as_i64().unwrap() == 1,
+                                    score: set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64().unwrap()
                                 }
                             ],
                         }
                     );
+                
                 }
             }
         }
