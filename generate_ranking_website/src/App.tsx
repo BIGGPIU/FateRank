@@ -13,7 +13,7 @@ function App() {
             <a className='absolute left-0 top-0 text-white underline hidden lg:block' href='https://biggpiu.github.io'>
                 By BIGG_PIU aka Worst T.O
             </a>
-            <a className='absolute right-0 top-0 text-white underline hidden lg:block' href='https://biggpiu.github.io'>
+            <a className='absolute right-0 top-0 text-white underline hidden lg:block' href='https://biggpiu.github.io/FateRankChangelog'>
                 Changelog
             </a>
             <div className='text-2xl text-white text-center mb-4'>
