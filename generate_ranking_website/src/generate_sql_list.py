@@ -10,7 +10,7 @@ now = datetime.today().strftime('%Y-%m-%d')
 print(f"{now}")
 
 tsx = """
-interface UserRatingItem {
+export interface UserRatingItem {
     username:string,
     elo:number,
     region:string,
