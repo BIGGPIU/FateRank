@@ -17,6 +17,11 @@ query GetSets($EventId: ID, $Page: Int) {
                 ) {
                     standing {
                         placement
+                        stats {
+                            score {
+                              value
+                            }
+                        }
                         entrant {
                             participants {
                                 user {

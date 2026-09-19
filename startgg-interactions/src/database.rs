@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use sqlx::{Pool, Sqlite, SqlitePool};
 
-use crate::{constants::MAX_REQUESTS_PER_MINUTE, elo::Elo, startgg::{self, StartGG}};
+use crate::{constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, elo::Elo, startgg::{self, StartGG}};
 
 pub struct Database {
     pool:Pool<Sqlite>
@@ -32,12 +32,13 @@ impl Database {
 
         for (uid,rating) in elo.get_users() {
             sqlx::query::<Sqlite>
-            ("INSERT INTO User (startgg_uid,elo,true_elo,deviation,volatility) VALUES ($1,$2,$5,$3,$4)")
+            ("INSERT INTO User (startgg_uid,elo,true_elo,deviation,volatility,confidence) VALUES ($1,$2,$5,$3,$4,$6)")
             .bind(uid)
-            .bind(rating.rating)
-            .bind(rating.deviation)
-            .bind(rating.volatility)
-            .bind(rating.rating - rating.deviation)
+            .bind(rating.1.rating)
+            .bind(rating.1.deviation)
+            .bind(rating.1.volatility)
+            .bind(rating.1.rating - rating.1.deviation)
+            .bind(rating.0.0)
             .execute(&self.pool)
             .await
             .unwrap();
@@ -54,7 +55,7 @@ impl Database {
 
             if requests >= MAX_REQUESTS_PER_MINUTE {
                 println!("Sleeping to avoid rate limit...");
-                tokio::time::sleep(Duration::from_mins(1)).await;
+                tokio::time::sleep(STARTGG_WAIT_TIME).await;
                 println!("done");
                 requests = 0;
             }
