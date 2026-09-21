@@ -32,7 +32,14 @@ function App() {
                     set_filtered_users(x)
                 }
                 else {
-                    set_filtered_users(v.target.value.split("\n"))
+                    let x = v.target.value.split("\n");
+
+                    for (let index = 0; index < x.length; index++) {
+                        x[index] = x[index].replace("https://www.start.gg/","");
+                        console.log(x[index]);
+                    }
+
+                    set_filtered_users(x)
                 }
 
 

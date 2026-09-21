@@ -2,7 +2,7 @@ use std::{sync::{Arc, Mutex}, time::Duration};
 
 use json::{JsonValue, object};
 
-use crate::{auth, constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, json_structs::{self}, vibe_coded};
+use crate::{auth, constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, json_structs::{self}, startgg_ignores::IgnoredSet, vibe_coded};
 
 
 
@@ -237,7 +237,7 @@ impl StartGG {
             )
             .body(
                 object! {
-                    "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) { sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { slots ( includeByes:false ) { standing { placement stats { score { value } } entrant { participants { user { id slug } } } } } } } } }",
+                    "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) { sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { id slots ( includeByes:false ) { standing { placement stats { score { value } } entrant { participants { user { id slug } } } } } } } } }",
                     "variables":{
                         "EventId": event_id,
                         "Page":1
@@ -259,6 +259,12 @@ impl StartGG {
 
         for set in r["data"]["event"]["sets"]["nodes"].members() {
 
+
+            if let Some(x) = IgnoredSet::is_ignored_set(set["id"].as_i64().unwrap()) {
+                v.push(x);
+                continue;
+            }
+
             sets_counted += 1;
             println!("Reading set {sets_counted} of event id {event_id}");
 
@@ -275,6 +281,8 @@ impl StartGG {
             if let None = set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64() {
                 continue;
             }
+
+
 
             v.push(
                 TournamentSet {
@@ -314,7 +322,7 @@ impl StartGG {
                     )
                     .body(
                         object! {
-                            "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) { sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { slots ( includeByes:false ) { standing { placement stats { score { value } } entrant { participants { user { id slug } } } } } } } } }",
+                            "query":"query GetSets($EventId: ID, $Page: Int) {event(id: $EventId) { sets ( page:$Page, perPage:32, sortType: RECENT, filters: { showByes:false } ) { pageInfo { totalPages } nodes { id slots ( includeByes:false ) { standing { placement stats { score { value } } entrant { participants { user { id slug } } } } } } } } }",
                             "variables": {
                                 "EventId": event_id,
                                 "Page":page
@@ -332,6 +340,11 @@ impl StartGG {
                 ).unwrap();
 
                 for set in r["data"]["event"]["sets"]["nodes"].members()  {
+
+                    if let Some(x) = IgnoredSet::is_ignored_set(set["id"].as_i64().unwrap()) {
+                        v.push(x);
+                        continue;
+                    }
 
                     sets_counted += 1;
                     println!("Reading set {sets_counted} of event id {event_id}");
