@@ -13,3 +13,4 @@ Cargo.lock
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 startgg-interactions/src/auth.rs
+startgg-interactions/src/challonge/auth.rs

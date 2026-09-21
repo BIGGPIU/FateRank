@@ -10,6 +10,8 @@ mod auth;
 mod elo;
 mod database;
 mod vibe_coded;
+mod startgg_ignores;
+mod challonge;
 
 #[tokio::main]
 async fn main() {

@@ -21,7 +21,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Sonikun",
-            elo: 1940.921453043613,
+            elo: 1952.20250764111,
             region: "NA",
             slug: "user/2d529950",
             confidence: 71
@@ -30,7 +30,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Kraven Morcom",
-            elo: 1845.6592928029654,
+            elo: 1851.7848580442212,
             region: "NA",
             slug: "user/e602d6bb",
             confidence: 21
@@ -39,7 +39,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "KingofNinjas789",
-            elo: 1821.3764893539326,
+            elo: 1829.6491922381579,
             region: "NA",
             slug: "user/81cc3da6",
             confidence: 41
@@ -56,8 +56,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Sprite",
+            elo: 1803.2675351198582,
+            region: "NA",
+            slug: "user/189e57fd",
+            confidence: 13
+        },
+
+    
+        {
             username: "Chopsuey",
-            elo: 1793.8364515140768,
+            elo: 1800.0693011721373,
             region: "NA",
             slug: "user/5e94fdfd",
             confidence: 13
@@ -65,17 +74,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Hachi",
-            elo: 1792.8166724744347,
-            region: "NA",
-            slug: "user/6ab1f2a8",
-            confidence: 19
-        },
-
-    
-        {
             username: "Spritecranberry145829103",
-            elo: 1788.0570451124981,
+            elo: 1797.4213721517724,
             region: "UNK",
             slug: "user/be47db16",
             confidence: 22
@@ -83,8 +83,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Hachi",
+            elo: 1790.9795389420478,
+            region: "NA",
+            slug: "user/6ab1f2a8",
+            confidence: 19
+        },
+
+    
+        {
             username: "NAKAKAPAGPABAGABAG",
-            elo: 1764.0705089514092,
+            elo: 1774.022590496205,
             region: "NA",
             slug: "user/6f5e9b4b",
             confidence: 6
@@ -92,8 +101,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "YOGAMEWIZARD",
+            elo: 1768.133395763534,
+            region: "NA",
+            slug: "user/38b9de27",
+            confidence: 14
+        },
+
+    
+        {
             username: "Mahihkan Sky",
-            elo: 1763.135787648359,
+            elo: 1764.6047784318032,
             region: "NA",
             slug: "user/1981f799",
             confidence: 11
@@ -110,17 +128,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "YOGAMEWIZARD",
-            elo: 1758.28607332134,
-            region: "NA",
-            slug: "user/38b9de27",
-            confidence: 14
-        },
-
-    
-        {
             username: "LLon",
-            elo: 1756.6353253421407,
+            elo: 1758.0754223315564,
             region: "KOR",
             slug: "user/27295b2c",
             confidence: 12
@@ -128,20 +137,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "LuchikaDRS",
-            elo: 1749.345774078591,
-            region: "NA",
-            slug: "user/d6c43847",
-            confidence: 28
+            username: "Detective Crow",
+            elo: 1757.9400267144133,
+            region: "UNK",
+            slug: "user/5976380f",
+            confidence: 21
         },
 
     
         {
             username: "Cykes_02",
-            elo: 1744.0296847199552,
+            elo: 1748.3479644638833,
             region: "NA",
             slug: "user/1aaf3e94",
             confidence: 9
+        },
+
+    
+        {
+            username: "LuchikaDRS",
+            elo: 1747.297806681932,
+            region: "NA",
+            slug: "user/d6c43847",
+            confidence: 28
         },
 
     
@@ -155,20 +173,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Detective Crow",
-            elo: 1738.629993478175,
-            region: "UNK",
-            slug: "user/5976380f",
-            confidence: 21
+            username: "Berto",
+            elo: 1736.8054583011553,
+            region: "NA",
+            slug: "user/14cf793e",
+            confidence: 4
         },
 
     
         {
-            username: "Berto",
-            elo: 1733.9316094689343,
+            username: "Ryazo",
+            elo: 1735.9030026724433,
             region: "NA",
-            slug: "user/14cf793e",
-            confidence: 4
+            slug: "user/0c038e56",
+            confidence: 20
         },
 
     
@@ -182,29 +200,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Ryazo",
-            elo: 1724.1124786300072,
-            region: "NA",
-            slug: "user/0c038e56",
-            confidence: 20
-        },
-
-    
-        {
             username: "Megu",
             elo: 1718.4265794502076,
             region: "UNK",
             slug: "user/670d2170",
             confidence: 2
-        },
-
-    
-        {
-            username: "Sprite",
-            elo: 1715.8483943017634,
-            region: "NA",
-            slug: "user/189e57fd",
-            confidence: 17
         },
 
     
@@ -223,6 +223,15 @@ export const rating_list:Array<UserRatingItem> = [
             region: "EU",
             slug: "user/ff2f0dc4",
             confidence: 4
+        },
+
+    
+        {
+            username: "Lotad",
+            elo: 1692.046511430884,
+            region: "NA",
+            slug: "user/a85715a4",
+            confidence: 13
         },
 
     
@@ -254,6 +263,24 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Mldorli",
+            elo: 1683.102395382888,
+            region: "NA",
+            slug: "user/6ea2e0a7",
+            confidence: 5
+        },
+
+    
+        {
+            username: "Guapo",
+            elo: 1682.7316054246553,
+            region: "NA",
+            slug: "user/8512922f",
+            confidence: 12
+        },
+
+    
+        {
             username: "Brigadier_BunBun",
             elo: 1682.7070313763586,
             region: "NA",
@@ -268,33 +295,6 @@ export const rating_list:Array<UserRatingItem> = [
             region: "NA",
             slug: "user/63d5cb8d",
             confidence: 3
-        },
-
-    
-        {
-            username: "Lotad",
-            elo: 1681.6710499597282,
-            region: "NA",
-            slug: "user/a85715a4",
-            confidence: 13
-        },
-
-    
-        {
-            username: "Mldorli",
-            elo: 1675.121995520353,
-            region: "NA",
-            slug: "user/6ea2e0a7",
-            confidence: 5
-        },
-
-    
-        {
-            username: "Guapo",
-            elo: 1674.2541702786764,
-            region: "NA",
-            slug: "user/8512922f",
-            confidence: 12
         },
 
     
@@ -317,11 +317,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "katy",
+            elo: 1665.9781230817634,
+            region: "NA",
+            slug: "user/e6bf5fc5",
+            confidence: 8
+        },
+
+    
+        {
             username: "Luke1235",
             elo: 1657.1278891180511,
             region: "EU",
             slug: "user/28427a09",
             confidence: 9
+        },
+
+    
+        {
+            username: "Mr.Pengu",
+            elo: 1653.4767174953317,
+            region: "NA",
+            slug: "user/20910131",
+            confidence: 27
         },
 
     
@@ -335,20 +353,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Mr.Pengu",
-            elo: 1649.9330464460631,
+            username: "Night",
+            elo: 1652.63803376362,
             region: "NA",
-            slug: "user/20910131",
-            confidence: 27
-        },
-
-    
-        {
-            username: "katy",
-            elo: 1646.1185382757053,
-            region: "NA",
-            slug: "user/e6bf5fc5",
-            confidence: 8
+            slug: "user/8ae49298",
+            confidence: 17
         },
 
     
@@ -371,20 +380,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Night",
-            elo: 1641.7125820726517,
+            username: "MobiusRaven",
+            elo: 1641.7512702244128,
             region: "NA",
-            slug: "user/8ae49298",
-            confidence: 17
+            slug: "user/c1ba8619",
+            confidence: 11
         },
 
     
         {
-            username: "MobiusRaven",
-            elo: 1641.6729123171153,
-            region: "NA",
-            slug: "user/c1ba8619",
-            confidence: 11
+            username: "LA CAMA",
+            elo: 1638.5857999604143,
+            region: "UNK",
+            slug: "user/a23f4764",
+            confidence: 4
         },
 
     
@@ -398,26 +407,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "LA CAMA",
-            elo: 1632.9968782754675,
-            region: "UNK",
-            slug: "user/a23f4764",
-            confidence: 4
-        },
-
-    
-        {
-            username: "Monkey4012",
-            elo: 1621.5418192978818,
-            region: "NA",
-            slug: "user/2706d2c5",
-            confidence: 7
-        },
-
-    
-        {
             username: "E2DEKU",
-            elo: 1617.6391903271367,
+            elo: 1630.8535403075505,
             region: "NA",
             slug: "user/29555b35",
             confidence: 57
@@ -425,8 +416,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "MysteryRacer21",
+            elo: 1620.8100725699762,
+            region: "UNK",
+            slug: "user/acdcd517",
+            confidence: 13
+        },
+
+    
+        {
             username: "Dr.Ragnarok",
-            elo: 1616.8329168991747,
+            elo: 1619.3222532696361,
             region: "NA",
             slug: "user/e62334f2",
             confidence: 20
@@ -435,7 +435,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "hashimo",
-            elo: 1615.6958602556874,
+            elo: 1614.298194533889,
             region: "JPN",
             slug: "user/7f3c55f1",
             confidence: 14
@@ -443,17 +443,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "MysteryRacer21",
-            elo: 1612.1359476070172,
-            region: "UNK",
-            slug: "user/acdcd517",
-            confidence: 13
-        },
-
-    
-        {
             username: "結月有希 ~ Yuzuki Yuki",
-            elo: 1601.6133120714317,
+            elo: 1610.8580869163707,
             region: "NA",
             slug: "user/326a2268",
             confidence: 10
@@ -461,8 +452,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Monkey4012",
+            elo: 1605.0582793855601,
+            region: "NA",
+            slug: "user/2706d2c5",
+            confidence: 7
+        },
+
+    
+        {
             username: "Crackin Atkins",
-            elo: 1596.7068647363772,
+            elo: 1602.7826421512489,
             region: "NA",
             slug: "user/2455f196",
             confidence: 4
@@ -488,6 +488,42 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Duckator",
+            elo: 1589.7897975010992,
+            region: "NA",
+            slug: "user/4f876735",
+            confidence: 5
+        },
+
+    
+        {
+            username: "shadowPR",
+            elo: 1584.2783289947624,
+            region: "UNK",
+            slug: "user/3a79de82",
+            confidence: 24
+        },
+
+    
+        {
+            username: "Ronan Healy",
+            elo: 1583.0757736807711,
+            region: "NA",
+            slug: "user/c8cdfd3a",
+            confidence: 18
+        },
+
+    
+        {
+            username: "Gex",
+            elo: 1582.8898671383458,
+            region: "UNK",
+            slug: "user/55542af6",
+            confidence: 68
+        },
+
+    
+        {
             username: "Trashy",
             elo: 1582.8401723271863,
             region: "EU",
@@ -497,47 +533,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Gex",
-            elo: 1575.453414861835,
-            region: "UNK",
-            slug: "user/55542af6",
-            confidence: 68
-        },
-
-    
-        {
-            username: "UMISHO",
-            elo: 1575.3990855195686,
-            region: "UNK",
-            slug: "user/c50acbc2",
-            confidence: 5
-        },
-
-    
-        {
             username: "HBKMan",
-            elo: 1574.9446104688307,
+            elo: 1575.045122063018,
             region: "NA",
             slug: "user/61c3b4db",
             confidence: 7
-        },
-
-    
-        {
-            username: "shadowPR",
-            elo: 1573.4602224801577,
-            region: "UNK",
-            slug: "user/3a79de82",
-            confidence: 24
-        },
-
-    
-        {
-            username: "TomoA",
-            elo: 1573.2085450526533,
-            region: "NA",
-            slug: "user/416ca15a",
-            confidence: 29
         },
 
     
@@ -551,17 +551,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Ronan Healy",
-            elo: 1571.8126953423068,
-            region: "NA",
-            slug: "user/c8cdfd3a",
-            confidence: 18
+            username: "UMISHO",
+            elo: 1571.972505292741,
+            region: "UNK",
+            slug: "user/c50acbc2",
+            confidence: 5
         },
 
     
         {
             username: "Laspanditas",
-            elo: 1566.7408018232559,
+            elo: 1568.2642647428115,
             region: "NA",
             slug: "user/234bd946",
             confidence: 10
@@ -578,20 +578,38 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Duckator",
-            elo: 1557.134161568839,
-            region: "NA",
-            slug: "user/4f876735",
-            confidence: 5
+            username: "Kreation",
+            elo: 1556.7646993884027,
+            region: "SA",
+            slug: "user/8608bd2f",
+            confidence: 10
         },
 
     
         {
-            username: "Kreation",
-            elo: 1555.2040479602356,
-            region: "SA",
-            slug: "user/8608bd2f",
-            confidence: 10
+            username: "TomoA",
+            elo: 1553.9696197336218,
+            region: "NA",
+            slug: "user/416ca15a",
+            confidence: 22
+        },
+
+    
+        {
+            username: "Zrrkon",
+            elo: 1553.9280204164688,
+            region: "NA",
+            slug: "user/6db54991",
+            confidence: 32
+        },
+
+    
+        {
+            username: "Mimighoul Master",
+            elo: 1550.2444828551893,
+            region: "NA",
+            slug: "user/1c7daef6",
+            confidence: 5
         },
 
     
@@ -605,8 +623,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Raich",
+            elo: 1549.6146607890464,
+            region: "NA",
+            slug: "user/792c29de",
+            confidence: 33
+        },
+
+    
+        {
             username: "DaBelowZero",
-            elo: 1547.2995350934916,
+            elo: 1548.0016861433025,
             region: "NA",
             slug: "user/f2206539",
             confidence: 9
@@ -623,26 +650,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Raich",
-            elo: 1544.4521586597234,
-            region: "NA",
-            slug: "user/792c29de",
-            confidence: 33
-        },
-
-    
-        {
-            username: "Zrrkon",
-            elo: 1543.9602607750248,
-            region: "NA",
-            slug: "user/6db54991",
-            confidence: 32
-        },
-
-    
-        {
             username: "Mastrcheap",
-            elo: 1535.961040580628,
+            elo: 1545.340149237787,
             region: "NA",
             slug: "user/1e186b5c",
             confidence: 12
@@ -650,17 +659,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Mimighoul Master",
-            elo: 1534.4274548386497,
+            username: "Reapers Ruling Rat",
+            elo: 1543.9423383813248,
             region: "NA",
-            slug: "user/1c7daef6",
-            confidence: 5
+            slug: "user/fcc41777",
+            confidence: 70
         },
 
     
         {
             username: "Monkey :)",
-            elo: 1533.0632810818674,
+            elo: 1537.1765962587199,
             region: "NA",
             slug: "user/40a2c783",
             confidence: 31
@@ -668,11 +677,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Reapers Ruling Rat",
-            elo: 1531.3617396948728,
-            region: "NA",
-            slug: "user/fcc41777",
-            confidence: 72
+            username: "Pokedude",
+            elo: 1530.7708921225615,
+            region: "UNK",
+            slug: "user/9f4bf6c5",
+            confidence: 12
         },
 
     
@@ -686,11 +695,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Pokedude",
-            elo: 1528.9482796629416,
-            region: "UNK",
-            slug: "user/9f4bf6c5",
-            confidence: 12
+            username: "JOE MAMA",
+            elo: 1528.1853824996065,
+            region: "NA",
+            slug: "user/dbbc84f4",
+            confidence: 10
         },
 
     
@@ -704,20 +713,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "JOE MAMA",
-            elo: 1525.254844330551,
+            username: "Blackfeathershadow",
+            elo: 1526.8293015045808,
             region: "NA",
-            slug: "user/dbbc84f4",
-            confidence: 10
+            slug: "user/ad2ea9b0",
+            confidence: 2
         },
 
     
         {
-            username: "Blackfeathershadow",
-            elo: 1521.730638475592,
+            username: "Tokai Tatum",
+            elo: 1526.3448949377425,
             region: "NA",
-            slug: "user/ad2ea9b0",
-            confidence: 2
+            slug: "user/97273aba",
+            confidence: 25
+        },
+
+    
+        {
+            username: "GragonMonkey",
+            elo: 1522.6665791980138,
+            region: "NA",
+            slug: "user/7617abc0",
+            confidence: 26
         },
 
     
@@ -731,11 +749,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Tokai Tatum",
-            elo: 1514.7114715048006,
+            username: "BUMBACHUNGA",
+            elo: 1517.9352758531843,
             region: "NA",
-            slug: "user/97273aba",
-            confidence: 25
+            slug: "user/39dcdc1f",
+            confidence: 69
         },
 
     
@@ -749,20 +767,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "GragonMonkey",
-            elo: 1509.993838819454,
-            region: "NA",
-            slug: "user/7617abc0",
-            confidence: 26
+            username: "thechriss2004s",
+            elo: 1510.2295454468797,
+            region: "UNK",
+            slug: "user/c2944890",
+            confidence: 37
         },
 
     
         {
-            username: "BUMBACHUNGA",
-            elo: 1508.393454499006,
-            region: "NA",
-            slug: "user/39dcdc1f",
-            confidence: 73
+            username: "MerrliT",
+            elo: 1509.1348681147433,
+            region: "UNK",
+            slug: "user/c5d9cd33",
+            confidence: 5
         },
 
     
@@ -776,15 +794,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "FourSwordKirby",
-            elo: 1507.1104787641489,
-            region: "NA",
-            slug: "user/df0d8159",
-            confidence: 16
-        },
-
-    
-        {
             username: "Hakari882",
             elo: 1506.7700286352288,
             region: "ASIA",
@@ -794,17 +803,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Burnt Bread",
-            elo: 1505.4877384893948,
-            region: "UNK",
-            slug: "user/c8f8515c",
-            confidence: 13
+            username: "Anima",
+            elo: 1504.7219046520229,
+            region: "NA",
+            slug: "user/baf89dd1",
+            confidence: 4
         },
 
     
         {
             username: "Xeagas",
-            elo: 1503.142959566097,
+            elo: 1503.2364675085219,
             region: "NA",
             slug: "user/07774503",
             confidence: 9
@@ -830,26 +839,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "MerrliT",
-            elo: 1499.910920566551,
-            region: "UNK",
-            slug: "user/c5d9cd33",
-            confidence: 5
-        },
-
-    
-        {
-            username: "thechriss2004s",
-            elo: 1499.7345138239646,
-            region: "UNK",
-            slug: "user/c2944890",
-            confidence: 37
+            username: "FourSwordKirby",
+            elo: 1502.0949585564558,
+            region: "NA",
+            slug: "user/df0d8159",
+            confidence: 16
         },
 
     
         {
             username: "Nyan-derthal",
-            elo: 1497.462945219189,
+            elo: 1498.1447687447042,
             region: "NA",
             slug: "user/1f0d5074",
             confidence: 5
@@ -866,6 +866,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Twimmy",
+            elo: 1493.3865117823805,
+            region: "NA",
+            slug: "user/f029cf7d",
+            confidence: 4
+        },
+
+    
+        {
             username: "Coffee Farmer",
             elo: 1492.9497261167198,
             region: "EU",
@@ -875,10 +884,10 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Anima",
-            elo: 1487.588910267928,
+            username: "Orrax / Luke",
+            elo: 1489.649647793901,
             region: "NA",
-            slug: "user/baf89dd1",
+            slug: "user/79401a64",
             confidence: 4
         },
 
@@ -911,11 +920,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Twimmy",
-            elo: 1479.879422972294,
+            username: "CoolmasterJG",
+            elo: 1480.2949287810522,
             region: "NA",
-            slug: "user/f029cf7d",
-            confidence: 4
+            slug: "user/dc940523",
+            confidence: 6
+        },
+
+    
+        {
+            username: "Oguri Cap",
+            elo: 1479.7851703039041,
+            region: "UNK",
+            slug: "user/c7e96de0",
+            confidence: 93
         },
 
     
@@ -929,38 +947,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Orrax / Luke",
-            elo: 1474.7225105931482,
-            region: "NA",
-            slug: "user/79401a64",
-            confidence: 4
-        },
-
-    
-        {
             username: "Dave (UNPOSSIBLE)",
-            elo: 1471.5258702051497,
+            elo: 1473.5456268250732,
             region: "NA",
             slug: "user/658d1883",
             confidence: 13
-        },
-
-    
-        {
-            username: "Oguri Cap",
-            elo: 1468.4002043605678,
-            region: "UNK",
-            slug: "user/c7e96de0",
-            confidence: 97
-        },
-
-    
-        {
-            username: "CoolmasterJG",
-            elo: 1468.172225105371,
-            region: "NA",
-            slug: "user/dc940523",
-            confidence: 6
         },
 
     
@@ -970,6 +961,15 @@ export const rating_list:Array<UserRatingItem> = [
             region: "EU",
             slug: "user/7eb3b2b2",
             confidence: 5
+        },
+
+    
+        {
+            username: "NuclearTaco2042",
+            elo: 1466.9745265464396,
+            region: "NA",
+            slug: "user/fb0eb1bf",
+            confidence: 8
         },
 
     
@@ -987,6 +987,15 @@ export const rating_list:Array<UserRatingItem> = [
             elo: 1464.9774850461508,
             region: "NA",
             slug: "user/d59b53aa",
+            confidence: 9
+        },
+
+    
+        {
+            username: "Masive",
+            elo: 1460.8372373453838,
+            region: "NA",
+            slug: "user/070aa910",
             confidence: 9
         },
 
@@ -1019,29 +1028,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "NuclearTaco2042",
-            elo: 1457.4233211437295,
-            region: "NA",
-            slug: "user/fb0eb1bf",
-            confidence: 8
-        },
-
-    
-        {
             username: "PMXHOMIE",
             elo: 1457.201135157895,
             region: "NA",
             slug: "user/98004a72",
             confidence: 5
-        },
-
-    
-        {
-            username: "Masive",
-            elo: 1454.5800710504648,
-            region: "NA",
-            slug: "user/070aa910",
-            confidence: 9
         },
 
     
@@ -1055,6 +1046,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Burnt Bread",
+            elo: 1449.5052170445772,
+            region: "UNK",
+            slug: "user/c8f8515c",
+            confidence: 8
+        },
+
+    
+        {
             username: "Peepohold",
             elo: 1447.0192141618752,
             region: "EU",
@@ -1064,35 +1064,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Occurring Gap",
-            elo: 1441.6816848066458,
-            region: "NA",
-            slug: "user/6dc179d6",
-            confidence: 9
-        },
-
-    
-        {
-            username: "GEN D",
-            elo: 1441.1076875295573,
-            region: "NA",
-            slug: "user/c913b1b3",
-            confidence: 7
-        },
-
-    
-        {
-            username: "Woe90",
-            elo: 1436.2334862651167,
-            region: "NA",
-            slug: "user/ec318e4c",
-            confidence: 11
-        },
-
-    
-        {
             username: "Reilly",
-            elo: 1435.8840169268824,
+            elo: 1446.3106175092712,
             region: "NA",
             slug: "user/6c5e9735",
             confidence: 26
@@ -1100,17 +1073,35 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Bojack",
-            elo: 1433.9815434458571,
+            username: "Serene Smile",
+            elo: 1444.8678481922614,
             region: "NA",
-            slug: "user/958b43af",
-            confidence: 5
+            slug: "user/3b3752be",
+            confidence: 22
+        },
+
+    
+        {
+            username: "Kanzuki",
+            elo: 1444.8054478892464,
+            region: "NA",
+            slug: "user/7d1a7cdc",
+            confidence: 3
+        },
+
+    
+        {
+            username: "Occurring Gap",
+            elo: 1444.7355822787601,
+            region: "NA",
+            slug: "user/6dc179d6",
+            confidence: 9
         },
 
     
         {
             username: "bweans",
-            elo: 1433.4882214121105,
+            elo: 1443.5861975820392,
             region: "NA",
             slug: "user/71dad7ab",
             confidence: 39
@@ -1119,10 +1110,46 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "jadestar63",
-            elo: 1431.5078929308609,
+            elo: 1443.2819984097132,
             region: "NA",
             slug: "user/1a73f5dc",
             confidence: 55
+        },
+
+    
+        {
+            username: "GEN D",
+            elo: 1441.2796367494325,
+            region: "NA",
+            slug: "user/c913b1b3",
+            confidence: 7
+        },
+
+    
+        {
+            username: "Woe90",
+            elo: 1439.803704282912,
+            region: "NA",
+            slug: "user/ec318e4c",
+            confidence: 11
+        },
+
+    
+        {
+            username: "Bojack",
+            elo: 1438.6518795189816,
+            region: "NA",
+            slug: "user/958b43af",
+            confidence: 5
+        },
+
+    
+        {
+            username: "SethMitchy",
+            elo: 1435.2275639040786,
+            region: "NA",
+            slug: "user/6c82c752",
+            confidence: 11
         },
 
     
@@ -1145,20 +1172,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "SethMitchy",
-            elo: 1426.058158606733,
+            username: "Patneko",
+            elo: 1427.0944365577134,
             region: "NA",
-            slug: "user/6c82c752",
-            confidence: 11
+            slug: "user/01913282",
+            confidence: 83
         },
 
     
         {
-            username: "Kanzuki",
-            elo: 1421.3427167180107,
-            region: "NA",
-            slug: "user/7d1a7cdc",
-            confidence: 3
+            username: "Not Shadow Joulton",
+            elo: 1423.2422923990114,
+            region: "UNK",
+            slug: "user/3280cc9d",
+            confidence: 21
         },
 
     
@@ -1172,20 +1199,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "RNGG",
-            elo: 1415.570866826458,
-            region: "UNK",
-            slug: "user/3a7bb97c",
-            confidence: 7
+            username: "NonchalantVerde",
+            elo: 1417.2210408764163,
+            region: "NA",
+            slug: "user/f1a50e8b",
+            confidence: 4
         },
 
     
         {
-            username: "Patneko",
-            elo: 1413.4080593140704,
-            region: "NA",
-            slug: "user/01913282",
-            confidence: 83
+            username: "RNGG",
+            elo: 1416.1757623767098,
+            region: "UNK",
+            slug: "user/3a7bb97c",
+            confidence: 7
         },
 
     
@@ -1208,29 +1235,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Not Shadow Joulton",
-            elo: 1411.652503379512,
-            region: "UNK",
-            slug: "user/3280cc9d",
-            confidence: 21
+            username: "BingDiaoQWQ",
+            elo: 1409.2849512257617,
+            region: "ASIA",
+            slug: "user/6bb4bdb4",
+            confidence: 10
         },
 
     
         {
-            username: "Serene Smile",
-            elo: 1408.3429234847092,
+            username: "HCShark10",
+            elo: 1408.3954938248885,
             region: "NA",
-            slug: "user/3b3752be",
-            confidence: 24
-        },
-
-    
-        {
-            username: "NonchalantVerde",
-            elo: 1407.905905748995,
-            region: "NA",
-            slug: "user/f1a50e8b",
-            confidence: 4
+            slug: "user/4595b8d4",
+            confidence: 19
         },
 
     
@@ -1244,6 +1262,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Exil",
+            elo: 1404.670142848775,
+            region: "NA",
+            slug: "user/d70185c5",
+            confidence: 15
+        },
+
+    
+        {
             username: "MMDK",
             elo: 1403.3618378582976,
             region: "ASIA",
@@ -1253,20 +1280,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Exil",
-            elo: 1402.5428945837934,
-            region: "NA",
-            slug: "user/d70185c5",
-            confidence: 15
+            username: "tyria",
+            elo: 1402.0208781969284,
+            region: "UNK",
+            slug: "user/bc6e8f4e",
+            confidence: 4
         },
 
     
         {
-            username: "BingDiaoQWQ",
-            elo: 1400.2552666782049,
-            region: "ASIA",
-            slug: "user/6bb4bdb4",
-            confidence: 10
+            username: "Kizuna",
+            elo: 1401.043452303743,
+            region: "UNK",
+            slug: "user/ac1b83d9",
+            confidence: 11
         },
 
     
@@ -1280,29 +1307,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "HCShark10",
-            elo: 1397.9304917394004,
+            username: "Goji",
+            elo: 1397.2972170013447,
             region: "NA",
-            slug: "user/4595b8d4",
-            confidence: 19
+            slug: "user/cfe9de71",
+            confidence: 15
         },
 
     
         {
-            username: "tyria",
-            elo: 1397.8094994535725,
-            region: "UNK",
-            slug: "user/bc6e8f4e",
+            username: "Edgelord44",
+            elo: 1391.0926908878118,
+            region: "NA",
+            slug: "user/855d114b",
             confidence: 4
-        },
-
-    
-        {
-            username: "Kizuna",
-            elo: 1391.997582395907,
-            region: "UNK",
-            slug: "user/ac1b83d9",
-            confidence: 11
         },
 
     
@@ -1311,15 +1329,6 @@ export const rating_list:Array<UserRatingItem> = [
             elo: 1390.1164047144005,
             region: "EU",
             slug: "user/372c4302",
-            confidence: 4
-        },
-
-    
-        {
-            username: "Edgelord44",
-            elo: 1388.8957662766397,
-            region: "NA",
-            slug: "user/855d114b",
             confidence: 4
         },
 
@@ -1334,8 +1343,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "LilSoonerFanInMO",
+            elo: 1388.4155572879108,
+            region: "NA",
+            slug: "user/6c0bad01",
+            confidence: 28
+        },
+
+    
+        {
             username: "Akihisa Sendo",
-            elo: 1385.1885216631542,
+            elo: 1388.144785466659,
             region: "NA",
             slug: "user/fc6f4a3f",
             confidence: 4
@@ -1343,11 +1361,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "SegGel2009",
-            elo: 1383.4218974040252,
-            region: "UNK",
-            slug: "user/32b3d907",
-            confidence: 7
+            username: "Shyoshiguy",
+            elo: 1386.0800843294176,
+            region: "EU",
+            slug: "user/53532547",
+            confidence: 26
         },
 
     
@@ -1362,28 +1380,10 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Awookanen",
-            elo: 1380.6093068301361,
+            elo: 1377.4735532577545,
             region: "NA",
             slug: "user/d03874e2",
             confidence: 4
-        },
-
-    
-        {
-            username: "Lord Hoseph Dong",
-            elo: 1379.1659025358802,
-            region: "NA",
-            slug: "user/5bd0d420",
-            confidence: 4
-        },
-
-    
-        {
-            username: "Goji",
-            elo: 1376.6852673108417,
-            region: "NA",
-            slug: "user/cfe9de71",
-            confidence: 15
         },
 
     
@@ -1397,62 +1397,26 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Kiomi",
-            elo: 1376.6286170133556,
+            username: "Lord Hoseph Dong",
+            elo: 1375.9296359257041,
             region: "NA",
-            slug: "user/1c28cd2f",
-            confidence: 9
+            slug: "user/5bd0d420",
+            confidence: 4
         },
 
     
         {
-            username: "LilSoonerFanInMO",
-            elo: 1374.1799972068284,
+            username: "Cythrin",
+            elo: 1374.7120955486919,
             region: "NA",
-            slug: "user/6c0bad01",
-            confidence: 28
-        },
-
-    
-        {
-            username: "Shyoshiguy",
-            elo: 1367.0171336513515,
-            region: "EU",
-            slug: "user/53532547",
-            confidence: 26
-        },
-
-    
-        {
-            username: "Omicron Austin",
-            elo: 1361.716287413366,
-            region: "NA",
-            slug: "user/9064ea66",
-            confidence: 6
-        },
-
-    
-        {
-            username: "E30",
-            elo: 1361.5642081282613,
-            region: "NA",
-            slug: "user/17970918",
-            confidence: 12
-        },
-
-    
-        {
-            username: "MetalBlurS",
-            elo: 1357.8675828646979,
-            region: "NA",
-            slug: "user/4ac53514",
-            confidence: 17
+            slug: "user/11c04680",
+            confidence: 11
         },
 
     
         {
             username: "Lavender",
-            elo: 1357.5134650339442,
+            elo: 1372.3786656908903,
             region: "UNK",
             slug: "user/96ab06a3",
             confidence: 51
@@ -1460,11 +1424,65 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Cythrin",
-            elo: 1357.2896763509734,
+            username: "E30",
+            elo: 1370.6677934424445,
             region: "NA",
-            slug: "user/11c04680",
-            confidence: 11
+            slug: "user/17970918",
+            confidence: 12
+        },
+
+    
+        {
+            username: "Iota",
+            elo: 1370.1580758050425,
+            region: "NA",
+            slug: "user/3a631faa",
+            confidence: 5
+        },
+
+    
+        {
+            username: "Do It Mix Tho?",
+            elo: 1369.3840513493244,
+            region: "NA",
+            slug: "user/e9a5af54",
+            confidence: 4
+        },
+
+    
+        {
+            username: "Omicron Austin",
+            elo: 1364.2529523738344,
+            region: "NA",
+            slug: "user/9064ea66",
+            confidence: 6
+        },
+
+    
+        {
+            username: "Kiomi",
+            elo: 1361.0976518362436,
+            region: "NA",
+            slug: "user/1c28cd2f",
+            confidence: 9
+        },
+
+    
+        {
+            username: "JGotchaBEEzy",
+            elo: 1360.374542772804,
+            region: "NA",
+            slug: "user/f144924e",
+            confidence: 5
+        },
+
+    
+        {
+            username: "MetalBlurS",
+            elo: 1358.177649726503,
+            region: "NA",
+            slug: "user/4ac53514",
+            confidence: 17
         },
 
     
@@ -1473,15 +1491,6 @@ export const rating_list:Array<UserRatingItem> = [
             elo: 1352.6431637906096,
             region: "NA",
             slug: "user/aeaa254b",
-            confidence: 5
-        },
-
-    
-        {
-            username: "Iota",
-            elo: 1351.8810957914325,
-            region: "NA",
-            slug: "user/3a631faa",
             confidence: 5
         },
 
@@ -1496,11 +1505,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "JGotchaBEEzy",
-            elo: 1346.0498878175865,
+            username: "Pillowtalk",
+            elo: 1348.9417166145859,
             region: "NA",
-            slug: "user/f144924e",
-            confidence: 5
+            slug: "user/db8a585a",
+            confidence: 24
         },
 
     
@@ -1523,15 +1532,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Do It Mix Tho?",
-            elo: 1344.664639887,
-            region: "NA",
-            slug: "user/e9a5af54",
-            confidence: 4
-        },
-
-    
-        {
             username: "Spartan",
             elo: 1343.548837725181,
             region: "NA",
@@ -1550,6 +1550,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "gamer",
+            elo: 1342.96182813682,
+            region: "NA",
+            slug: "user/b65de923",
+            confidence: 4
+        },
+
+    
+        {
             username: "ThatScrubDavid",
             elo: 1339.1202457965876,
             region: "NA",
@@ -1559,17 +1568,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "gamer",
-            elo: 1336.5563010914766,
-            region: "NA",
-            slug: "user/b65de923",
-            confidence: 4
-        },
-
-    
-        {
             username: "wingupingu",
-            elo: 1335.0410722801666,
+            elo: 1336.6789263019998,
             region: "UNK",
             slug: "user/b738dd0b",
             confidence: 5
@@ -1577,11 +1577,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Sokloeum",
-            elo: 1334.9587019019564,
+            username: "MrEater",
+            elo: 1334.4251104103025,
             region: "NA",
-            slug: "user/06a86484",
-            confidence: 4
+            slug: "user/bb80314f",
+            confidence: 9
         },
 
     
@@ -1595,11 +1595,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "MrEater",
-            elo: 1334.13103399612,
-            region: "NA",
-            slug: "user/bb80314f",
-            confidence: 9
+            username: "SegGel2009",
+            elo: 1334.1346102847554,
+            region: "UNK",
+            slug: "user/32b3d907",
+            confidence: 7
         },
 
     
@@ -1609,15 +1609,6 @@ export const rating_list:Array<UserRatingItem> = [
             region: "OCE",
             slug: "user/c25d4724",
             confidence: 5
-        },
-
-    
-        {
-            username: "Pillowtalk",
-            elo: 1332.5034825197456,
-            region: "NA",
-            slug: "user/db8a585a",
-            confidence: 24
         },
 
     
@@ -1649,6 +1640,33 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "JosesChrist",
+            elo: 1329.7339654811683,
+            region: "UNK",
+            slug: "user/d5028cd4",
+            confidence: 4
+        },
+
+    
+        {
+            username: "Shenanigans_XX",
+            elo: 1328.7890324161606,
+            region: "NA",
+            slug: "user/967aab37",
+            confidence: 8
+        },
+
+    
+        {
+            username: "Xeora AMV",
+            elo: 1328.5723420183242,
+            region: "NA",
+            slug: "user/d992913a",
+            confidence: 10
+        },
+
+    
+        {
             username: "Link Pendrago",
             elo: 1328.4144474579928,
             region: "NA",
@@ -1668,7 +1686,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Glinty",
-            elo: 1327.28470395456,
+            elo: 1328.0290497494816,
             region: "NA",
             slug: "user/73554805",
             confidence: 8
@@ -1677,7 +1695,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Cow",
-            elo: 1327.2144562218284,
+            elo: 1324.8853620546477,
             region: "NA",
             slug: "user/27945744",
             confidence: 10
@@ -1685,20 +1703,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Shenanigans_XX",
-            elo: 1325.9254697608003,
-            region: "NA",
-            slug: "user/967aab37",
-            confidence: 8
+            username: "Brimmy",
+            elo: 1324.6569694874395,
+            region: "UNK",
+            slug: "user/e78291f1",
+            confidence: 4
         },
 
     
         {
-            username: "Brimmy",
-            elo: 1324.5652719562918,
-            region: "UNK",
-            slug: "user/e78291f1",
-            confidence: 4
+            username: "EX Falchion",
+            elo: 1323.163075933907,
+            region: "NA",
+            slug: "user/7929fcfc",
+            confidence: 14
         },
 
     
@@ -1712,17 +1730,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "JosesChrist",
-            elo: 1322.9214630147785,
-            region: "UNK",
-            slug: "user/d5028cd4",
-            confidence: 4
-        },
-
-    
-        {
             username: "Mith",
-            elo: 1321.6137104442316,
+            elo: 1322.7833006011585,
             region: "SA",
             slug: "user/6809389f",
             confidence: 8
@@ -1739,20 +1748,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Xeora AMV",
-            elo: 1319.9598730911378,
-            region: "NA",
-            slug: "user/d992913a",
-            confidence: 10
+            username: "SSBSonic",
+            elo: 1317.1873996492318,
+            region: "UNK",
+            slug: "user/fc6763c6",
+            confidence: 8
         },
 
     
         {
-            username: "EX Falchion",
-            elo: 1315.8237044490602,
-            region: "NA",
-            slug: "user/7929fcfc",
-            confidence: 14
+            username: "Imano Ob",
+            elo: 1315.3997250875786,
+            region: "SA",
+            slug: "user/95d8795d",
+            confidence: 7
         },
 
     
@@ -1766,35 +1775,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Imano Ob",
-            elo: 1314.1792157646214,
-            region: "SA",
-            slug: "user/95d8795d",
-            confidence: 7
-        },
-
-    
-        {
-            username: "SSBSonic",
-            elo: 1308.2134396091799,
-            region: "UNK",
-            slug: "user/fc6763c6",
-            confidence: 8
-        },
-
-    
-        {
-            username: "Never Block",
-            elo: 1306.9448415930044,
-            region: "NA",
-            slug: "user/1dc503f3",
-            confidence: 6
-        },
-
-    
-        {
             username: "Garfield",
-            elo: 1304.1932176539194,
+            elo: 1308.2948014132605,
             region: "NA",
             slug: "user/837fdd82",
             confidence: 7
@@ -1802,11 +1784,38 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "CrimeSlayer",
-            elo: 1303.99006745117,
+            username: "Never Block",
+            elo: 1307.9088382783711,
             region: "NA",
-            slug: "user/7b662247",
+            slug: "user/1dc503f3",
+            confidence: 6
+        },
+
+    
+        {
+            username: "Sokloeum",
+            elo: 1307.3568541370628,
+            region: "NA",
+            slug: "user/06a86484",
+            confidence: 4
+        },
+
+    
+        {
+            username: "Cram",
+            elo: 1296.4306080992378,
+            region: "EU",
+            slug: "user/984ce173",
             confidence: 5
+        },
+
+    
+        {
+            username: "SkullRonin13",
+            elo: 1292.6696190767468,
+            region: "NA",
+            slug: "user/dcfad6df",
+            confidence: 4
         },
 
     
@@ -1829,15 +1838,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Cram",
-            elo: 1290.1838983181528,
-            region: "EU",
-            slug: "user/984ce173",
-            confidence: 5
-        },
-
-    
-        {
             username: "Darklight",
             elo: 1289.8460898755825,
             region: "NA",
@@ -1847,19 +1847,19 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Hee-Homeboy",
-            elo: 1284.188440633876,
-            region: "NA",
-            slug: "user/da9a49ee",
-            confidence: 4
+            username: "cerdi99",
+            elo: 1289.2314855208554,
+            region: "EU",
+            slug: "user/5b5ccf78",
+            confidence: 6
         },
 
     
         {
-            username: "SkullRonin13",
-            elo: 1283.87702037948,
+            username: "Hee-Homeboy",
+            elo: 1284.188440633876,
             region: "NA",
-            slug: "user/dcfad6df",
+            slug: "user/da9a49ee",
             confidence: 4
         },
 
@@ -1874,17 +1874,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "cerdi99",
-            elo: 1282.9221970842457,
-            region: "EU",
-            slug: "user/5b5ccf78",
-            confidence: 6
-        },
-
-    
-        {
             username: "Mallaclaqclaq123",
-            elo: 1281.4147652945867,
+            elo: 1281.634626857501,
             region: "NA",
             slug: "user/ee332be2",
             confidence: 4
@@ -1901,11 +1892,47 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "BXR",
+            elo: 1278.575565183552,
+            region: "NA",
+            slug: "user/5106f940",
+            confidence: 92
+        },
+
+    
+        {
+            username: "LuckyNaegi",
+            elo: 1278.1141497146289,
+            region: "NA",
+            slug: "user/84d50933",
+            confidence: 30
+        },
+
+    
+        {
+            username: "BrazenWhiteRose",
+            elo: 1277.2675524200865,
+            region: "UNK",
+            slug: "user/765c53cc",
+            confidence: 26
+        },
+
+    
+        {
             username: "sil",
             elo: 1277.2348959529654,
             region: "EU",
             slug: "user/ed4ce029",
             confidence: 5
+        },
+
+    
+        {
+            username: "Donny Tsunami",
+            elo: 1271.393187954981,
+            region: "NA",
+            slug: "user/235aef54",
+            confidence: 4
         },
 
     
@@ -1928,33 +1955,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Donny Tsunami",
-            elo: 1268.4647920593234,
-            region: "NA",
-            slug: "user/235aef54",
-            confidence: 4
-        },
-
-    
-        {
-            username: "BXR",
-            elo: 1267.5530224600661,
-            region: "NA",
-            slug: "user/5106f940",
-            confidence: 92
-        },
-
-    
-        {
-            username: "LuckyNaegi",
-            elo: 1265.9723197106969,
-            region: "NA",
-            slug: "user/84d50933",
-            confidence: 30
-        },
-
-    
-        {
             username: "Nago",
             elo: 1265.7291542368332,
             region: "NA",
@@ -1964,20 +1964,38 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Doogong",
-            elo: 1263.5007741043594,
-            region: "EU",
-            slug: "user/4e28951b",
-            confidence: 4
+            username: "Trickster?",
+            elo: 1264.7568302209047,
+            region: "NA",
+            slug: "user/84628656",
+            confidence: 15
         },
 
     
         {
             username: "KoreanPanda",
-            elo: 1263.2035491804945,
+            elo: 1264.263080289962,
             region: "NA",
             slug: "user/b2536a26",
             confidence: 5
+        },
+
+    
+        {
+            username: "ResideOverPower",
+            elo: 1263.7794703430643,
+            region: "NA",
+            slug: "user/416a6d61",
+            confidence: 8
+        },
+
+    
+        {
+            username: "Doogong",
+            elo: 1263.5007741043594,
+            region: "EU",
+            slug: "user/4e28951b",
+            confidence: 4
         },
 
     
@@ -1992,7 +2010,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Zachary Lacy",
-            elo: 1259.7994207241186,
+            elo: 1260.0133088716243,
             region: "NA",
             slug: "user/757a10f1",
             confidence: 7
@@ -2009,11 +2027,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "ResideOverPower",
-            elo: 1257.580792598178,
+            username: "Midboss",
+            elo: 1255.0381572080705,
             region: "NA",
-            slug: "user/416a6d61",
-            confidence: 8
+            slug: "user/f2e6f8ac",
+            confidence: 7
         },
 
     
@@ -2027,44 +2045,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Midboss",
-            elo: 1253.5093909267127,
-            region: "NA",
-            slug: "user/f2e6f8ac",
-            confidence: 7
-        },
-
-    
-        {
-            username: "BrazenWhiteRose",
-            elo: 1252.8517313238299,
-            region: "UNK",
-            slug: "user/765c53cc",
-            confidence: 26
-        },
-
-    
-        {
-            username: "Lant",
-            elo: 1251.8664502675933,
-            region: "NA",
-            slug: "user/d59b652b",
-            confidence: 12
-        },
-
-    
-        {
-            username: "Trickster?",
-            elo: 1251.7420256186767,
-            region: "NA",
-            slug: "user/84628656",
-            confidence: 15
-        },
-
-    
-        {
             username: "Canned",
-            elo: 1245.9674845489321,
+            elo: 1254.0375440824885,
             region: "NA",
             slug: "user/bab3159b",
             confidence: 4
@@ -2072,8 +2054,44 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Gman",
+            elo: 1253.9943727684326,
+            region: "NA",
+            slug: "user/7dcfb248",
+            confidence: 21
+        },
+
+    
+        {
+            username: "Lant",
+            elo: 1253.3055484859692,
+            region: "NA",
+            slug: "user/d59b652b",
+            confidence: 12
+        },
+
+    
+        {
+            username: "CrimeSlayer",
+            elo: 1252.5244970100762,
+            region: "NA",
+            slug: "user/7b662247",
+            confidence: 5
+        },
+
+    
+        {
+            username: "Mcintosh2002",
+            elo: 1252.0787145766205,
+            region: "NA",
+            slug: "user/446391b4",
+            confidence: 19
+        },
+
+    
+        {
             username: "winderling",
-            elo: 1244.8568681292734,
+            elo: 1247.5814986058458,
             region: "UNK",
             slug: "user/96021352",
             confidence: 4
@@ -2082,7 +2100,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Shadowpelt",
-            elo: 1243.2555659417185,
+            elo: 1247.3066054086637,
             region: "NA",
             slug: "user/de31c924",
             confidence: 11
@@ -2108,11 +2126,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Gman",
-            elo: 1237.3676420129334,
+            username: "ruby_chan",
+            elo: 1235.495830557583,
             region: "NA",
-            slug: "user/7dcfb248",
-            confidence: 21
+            slug: "user/55350b7a",
+            confidence: 12
         },
 
     
@@ -2135,20 +2153,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "ruby_chan",
-            elo: 1225.7619740873197,
+            username: "I Be Smart",
+            elo: 1224.9671659248704,
             region: "NA",
-            slug: "user/55350b7a",
-            confidence: 12
+            slug: "user/efa42be5",
+            confidence: 5
         },
 
     
         {
-            username: "I Be Smart",
-            elo: 1223.0330208682067,
-            region: "NA",
-            slug: "user/efa42be5",
-            confidence: 5
+            username: "Donpi",
+            elo: 1224.2239382799771,
+            region: "EU",
+            slug: "user/fbcc0f46",
+            confidence: 4
         },
 
     
@@ -2162,29 +2180,38 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Donpi",
-            elo: 1220.210401024659,
-            region: "EU",
-            slug: "user/fbcc0f46",
-            confidence: 4
+            username: "Burn0ut",
+            elo: 1216.8731412932646,
+            region: "NA",
+            slug: "user/bdd5a33d",
+            confidence: 5
         },
 
     
         {
-            username: "BigBloopster",
-            elo: 1218.1356237028572,
-            region: "NA",
-            slug: "user/3002787f",
-            confidence: 4
+            username: "Moontide",
+            elo: 1216.7245787829856,
+            region: "UNK",
+            slug: "user/22493f85",
+            confidence: 12
         },
 
     
         {
             username: "gemi+",
-            elo: 1215.1101753829437,
+            elo: 1215.2730447833799,
             region: "NA",
             slug: "user/8fffb7eb",
             confidence: 8
+        },
+
+    
+        {
+            username: "Hien",
+            elo: 1213.2243568233494,
+            region: "UNK",
+            slug: "user/9d6befd0",
+            confidence: 7
         },
 
     
@@ -2198,29 +2225,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Burn0ut",
-            elo: 1212.7101556539149,
+            username: "Intimidaving",
+            elo: 1211.1219946991284,
             region: "NA",
-            slug: "user/bdd5a33d",
-            confidence: 5
+            slug: "user/e896ee0b",
+            confidence: 69
         },
 
     
         {
-            username: "Mcintosh2002",
-            elo: 1211.4803758896826,
+            username: "Fish Liquor",
+            elo: 1210.6125453159327,
             region: "NA",
-            slug: "user/446391b4",
-            confidence: 22
+            slug: "user/660ad9c1",
+            confidence: 55
         },
 
     
         {
-            username: "Moontide",
-            elo: 1209.6666622199214,
-            region: "UNK",
-            slug: "user/22493f85",
-            confidence: 12
+            username: "DGF",
+            elo: 1209.7175809085431,
+            region: "NA",
+            slug: "user/567c6499",
+            confidence: 8
         },
 
     
@@ -2234,15 +2261,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "DGF",
-            elo: 1208.450555789687,
-            region: "NA",
-            slug: "user/567c6499",
-            confidence: 8
-        },
-
-    
-        {
             username: "Thejimmy246",
             elo: 1208.396877902137,
             region: "NA",
@@ -2252,11 +2270,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Hien",
-            elo: 1203.53965836265,
-            region: "UNK",
-            slug: "user/9d6befd0",
-            confidence: 7
+            username: "Jrock",
+            elo: 1205.9175471086273,
+            region: "NA",
+            slug: "user/9f54ff46",
+            confidence: 3
         },
 
     
@@ -2271,10 +2289,28 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Bwead",
-            elo: 1200.4203087628778,
+            elo: 1201.4876162914027,
             region: "NA",
             slug: "user/184d4fa1",
             confidence: 4
+        },
+
+    
+        {
+            username: "FunkyBoy",
+            elo: 1200.8959686180215,
+            region: "NA",
+            slug: "user/d844d130",
+            confidence: 5
+        },
+
+    
+        {
+            username: "Velvet",
+            elo: 1200.1622294781869,
+            region: "NA",
+            slug: "user/09ecd1a7",
+            confidence: 6
         },
 
     
@@ -2288,15 +2324,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Fish Liquor",
-            elo: 1200.0372340052963,
-            region: "NA",
-            slug: "user/660ad9c1",
-            confidence: 55
-        },
-
-    
-        {
             username: "Iris",
             elo: 1199.6997614726265,
             region: "NA",
@@ -2306,29 +2333,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Velvet",
-            elo: 1197.929296550747,
-            region: "NA",
-            slug: "user/09ecd1a7",
-            confidence: 6
-        },
-
-    
-        {
-            username: "Intimidaving",
-            elo: 1197.4469816544326,
-            region: "NA",
-            slug: "user/e896ee0b",
-            confidence: 73
-        },
-
-    
-        {
-            username: "FunkyBoy",
-            elo: 1193.777754467679,
-            region: "NA",
-            slug: "user/d844d130",
-            confidence: 5
+            username: "Vermillion",
+            elo: 1191.5541633666896,
+            region: "SA",
+            slug: "user/ab8df99a",
+            confidence: 3
         },
 
     
@@ -2342,20 +2351,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Jrock",
-            elo: 1191.3004887146546,
+            username: "Jay314",
+            elo: 1188.0280225212925,
             region: "NA",
-            slug: "user/9f54ff46",
-            confidence: 3
-        },
-
-    
-        {
-            username: "Vermillion",
-            elo: 1190.6869145638486,
-            region: "SA",
-            slug: "user/ab8df99a",
-            confidence: 3
+            slug: "user/f9b0632f",
+            confidence: 24
         },
 
     
@@ -2379,10 +2379,19 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "raiden",
-            elo: 1183.2685589073506,
+            elo: 1183.039640815617,
             region: "NA",
             slug: "user/3a67c8af",
             confidence: 3
+        },
+
+    
+        {
+            username: "BigBloopster",
+            elo: 1181.4529094755771,
+            region: "NA",
+            slug: "user/3002787f",
+            confidence: 4
         },
 
     
@@ -2391,6 +2400,15 @@ export const rating_list:Array<UserRatingItem> = [
             elo: 1178.7169130151144,
             region: "EU",
             slug: "user/3027c583",
+            confidence: 4
+        },
+
+    
+        {
+            username: "Artoria Nobunaga",
+            elo: 1177.6130477962006,
+            region: "JPN",
+            slug: "user/61b6bcce",
             confidence: 4
         },
 
@@ -2405,15 +2423,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Artoria Nobunaga",
-            elo: 1171.7637553212244,
-            region: "JPN",
-            slug: "user/61b6bcce",
-            confidence: 4
-        },
-
-    
-        {
             username: "[ BK SAS ]",
             elo: 1171.721500023502,
             region: "EU",
@@ -2423,11 +2432,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Jay314",
-            elo: 1170.6033004231958,
+            username: "Starfy_99",
+            elo: 1169.1447235106975,
+            region: "UNK",
+            slug: "user/82aff182",
+            confidence: 3
+        },
+
+    
+        {
+            username: "Verje",
+            elo: 1168.2169522749539,
             region: "NA",
-            slug: "user/f9b0632f",
-            confidence: 24
+            slug: "user/c64d66b4",
+            confidence: 3
         },
 
     
@@ -2450,6 +2468,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Yat0ro",
+            elo: 1165.3104793006053,
+            region: "ASIA",
+            slug: "user/7c8a7f9a",
+            confidence: 14
+        },
+
+    
+        {
             username: "mimi",
             elo: 1164.2444559853209,
             region: "NA",
@@ -2459,35 +2486,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Starfy_99",
-            elo: 1163.8927193006214,
-            region: "UNK",
-            slug: "user/82aff182",
-            confidence: 3
-        },
-
-    
-        {
-            username: "Verje",
-            elo: 1163.505369661772,
-            region: "NA",
-            slug: "user/c64d66b4",
-            confidence: 3
-        },
-
-    
-        {
-            username: "Wool",
-            elo: 1159.3698860211296,
-            region: "NA",
-            slug: "user/15219533",
-            confidence: 16
-        },
-
-    
-        {
             username: "AshuraRem",
-            elo: 1159.273314416168,
+            elo: 1160.9316749345335,
             region: "NA",
             slug: "user/deab881b",
             confidence: 4
@@ -2495,11 +2495,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Yat0ro",
-            elo: 1158.6106249381967,
-            region: "ASIA",
-            slug: "user/7c8a7f9a",
-            confidence: 14
+            username: "Wool",
+            elo: 1160.4331060103966,
+            region: "NA",
+            slug: "user/15219533",
+            confidence: 16
+        },
+
+    
+        {
+            username: "Commiku",
+            elo: 1159.6441734039797,
+            region: "UNK",
+            slug: "user/04198acf",
+            confidence: 4
         },
 
     
@@ -2513,10 +2522,10 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Commiku",
-            elo: 1154.172343949066,
-            region: "UNK",
-            slug: "user/04198acf",
+            username: "Hokage",
+            elo: 1154.3148722037452,
+            region: "NA",
+            slug: "user/ed8a12d0",
             confidence: 4
         },
 
@@ -2531,6 +2540,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Rulership",
+            elo: 1152.9610646751826,
+            region: "NA",
+            slug: "user/3a11b14d",
+            confidence: 6
+        },
+
+    
+        {
             username: "Sovereign",
             elo: 1150.5833554747512,
             region: "NA",
@@ -2540,26 +2558,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Rulership",
-            elo: 1142.6007511203147,
+            username: "Nevaltion",
+            elo: 1144.212816802641,
             region: "NA",
-            slug: "user/3a11b14d",
-            confidence: 6
-        },
-
-    
-        {
-            username: "Hokage",
-            elo: 1142.1414472449705,
-            region: "NA",
-            slug: "user/ed8a12d0",
-            confidence: 4
+            slug: "user/426ff9a4",
+            confidence: 3
         },
 
     
         {
             username: "seenubuck",
-            elo: 1141.1894037999377,
+            elo: 1141.449831282888,
             region: "NA",
             slug: "user/af6d22a3",
             confidence: 5
@@ -2577,7 +2586,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "KJpixel",
-            elo: 1138.7239522295256,
+            elo: 1139.4885860711106,
             region: "NA",
             slug: "user/d32f20fd",
             confidence: 1
@@ -2594,6 +2603,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Danger's Dynamic Dumpy",
+            elo: 1137.7350776475168,
+            region: "NA",
+            slug: "user/90465418",
+            confidence: 20
+        },
+
+    
+        {
             username: "Yemster",
             elo: 1136.8819772278637,
             region: "UNK",
@@ -2604,7 +2622,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "DanteRebellionX",
-            elo: 1133.9553023795002,
+            elo: 1134.501232262396,
             region: "NA",
             slug: "user/a26b48ff",
             confidence: 16
@@ -2621,24 +2639,6 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Danger's Dynamic Dumpy",
-            elo: 1131.4050659633929,
-            region: "NA",
-            slug: "user/90465418",
-            confidence: 20
-        },
-
-    
-        {
-            username: "Nevaltion",
-            elo: 1131.3719816070477,
-            region: "NA",
-            slug: "user/426ff9a4",
-            confidence: 3
-        },
-
-    
-        {
             username: "fancyhat",
             elo: 1129.7725709503675,
             region: "NA",
@@ -2649,9 +2649,27 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Garmore",
-            elo: 1125.5613841165627,
+            elo: 1126.0898151094345,
             region: "NA",
             slug: "user/bd69e2ab",
+            confidence: 3
+        },
+
+    
+        {
+            username: "Sorana",
+            elo: 1117.4750571261143,
+            region: "UNK",
+            slug: "user/185022ba",
+            confidence: 4
+        },
+
+    
+        {
+            username: "STONE",
+            elo: 1115.669149253908,
+            region: "UNK",
+            slug: "NONE",
             confidence: 3
         },
 
@@ -2666,17 +2684,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Sorana",
-            elo: 1114.9368301014981,
-            region: "UNK",
-            slug: "user/185022ba",
-            confidence: 4
-        },
-
-    
-        {
             username: "Troggz93",
-            elo: 1114.246983348405,
+            elo: 1114.489298916648,
             region: "NA",
             slug: "user/7b5a423d",
             confidence: 6
@@ -2702,11 +2711,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "SpicyChedderJack",
+            elo: 1108.68243751473,
+            region: "NA",
+            slug: "user/2321d491",
+            confidence: 22
+        },
+
+    
+        {
             username: "Feliks",
             elo: 1108.0748351065567,
             region: "EU",
             slug: "user/1c3a9a90",
             confidence: 4
+        },
+
+    
+        {
+            username: "FMBrosuke",
+            elo: 1106.0609136957655,
+            region: "NA",
+            slug: "user/87ac43fb",
+            confidence: 3
         },
 
     
@@ -2721,7 +2748,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Arvald",
-            elo: 1103.3290444779022,
+            elo: 1104.4763345079111,
             region: "NA",
             slug: "user/b3740aa8",
             confidence: 14
@@ -2747,62 +2774,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "SpicyChedderJack",
-            elo: 1102.2843256671656,
-            region: "NA",
-            slug: "user/2321d491",
-            confidence: 22
-        },
-
-    
-        {
-            username: "FMBrosuke",
-            elo: 1101.428546429293,
-            region: "NA",
-            slug: "user/87ac43fb",
-            confidence: 3
-        },
-
-    
-        {
-            username: "AriaofScarlet",
-            elo: 1100.9304664721164,
-            region: "NA",
-            slug: "user/3e3ba412",
-            confidence: 3
-        },
-
-    
-        {
-            username: "Balentine",
-            elo: 1100.704787014052,
-            region: "NA",
-            slug: "user/21924ed0",
-            confidence: 1
-        },
-
-    
-        {
-            username: "GoetiaGC",
-            elo: 1100.0865396179665,
-            region: "NA",
-            slug: "user/303576d6",
-            confidence: 13
-        },
-
-    
-        {
-            username: "STONE",
-            elo: 1097.1387593964741,
-            region: "UNK",
-            slug: "NONE",
-            confidence: 3
-        },
-
-    
-        {
             username: "Vollrath",
-            elo: 1096.093540499796,
+            elo: 1101.6491956773157,
             region: "NA",
             slug: "user/2545f973",
             confidence: 6
@@ -2810,11 +2783,47 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "GoetiaGC",
+            elo: 1101.3815111972647,
+            region: "NA",
+            slug: "user/303576d6",
+            confidence: 13
+        },
+
+    
+        {
+            username: "Balentine",
+            elo: 1101.153340576614,
+            region: "NA",
+            slug: "user/21924ed0",
+            confidence: 1
+        },
+
+    
+        {
+            username: "Spyder_306",
+            elo: 1099.450084211521,
+            region: "NA",
+            slug: "user/d308c688",
+            confidence: 13
+        },
+
+    
+        {
             username: "SABER",
-            elo: 1093.4878413479003,
+            elo: 1093.5120221077354,
             region: "UNK",
             slug: "user/2955cbd9",
             confidence: 5
+        },
+
+    
+        {
+            username: "Mmeaninglessnamee",
+            elo: 1092.5850116256854,
+            region: "NA",
+            slug: "user/11548f19",
+            confidence: 3
         },
 
     
@@ -2829,7 +2838,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Matau32",
-            elo: 1087.1099058480872,
+            elo: 1087.9380330209601,
             region: "UNK",
             slug: "user/62835d94",
             confidence: 3
@@ -2846,11 +2855,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Spyder_306",
-            elo: 1085.2614882344203,
+            username: "R. Noble",
+            elo: 1083.9034664538913,
             region: "NA",
-            slug: "user/d308c688",
-            confidence: 13
+            slug: "user/56d930bb",
+            confidence: 3
         },
 
     
@@ -2864,35 +2873,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Boogius",
-            elo: 1083.5709288759915,
-            region: "NA",
-            slug: "user/731b80a3",
-            confidence: 3
-        },
-
-    
-        {
-            username: "Rennikz",
-            elo: 1082.3708474666566,
-            region: "NA",
-            slug: "user/1ef47506",
-            confidence: 3
-        },
-
-    
-        {
-            username: "DreemWyvern",
-            elo: 1079.8407326638412,
-            region: "NA",
-            slug: "user/3e6d4bda",
-            confidence: 2
-        },
-
-    
-        {
             username: "Trillion-Crows",
-            elo: 1078.7218646617425,
+            elo: 1081.8187244595201,
             region: "NA",
             slug: "user/1f204c28",
             confidence: 4
@@ -2900,29 +2882,56 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Mmeaninglessnamee",
-            elo: 1078.6897622656636,
+            username: "YUKARIMETA",
+            elo: 1080.3335910070475,
             region: "NA",
-            slug: "user/11548f19",
-            confidence: 3
+            slug: "user/9a951dfd",
+            confidence: 1
         },
 
     
         {
-            username: "R. Noble",
-            elo: 1077.8960995474117,
+            username: "DreemWyvern",
+            elo: 1079.8686146962486,
             region: "NA",
-            slug: "user/56d930bb",
+            slug: "user/3e6d4bda",
+            confidence: 2
+        },
+
+    
+        {
+            username: "AriaofScarlet",
+            elo: 1077.4929440326807,
+            region: "NA",
+            slug: "user/3e3ba412",
             confidence: 3
         },
 
     
         {
             username: "Scrappy Sensei",
-            elo: 1076.8250234707714,
+            elo: 1076.9604413143572,
             region: "NA",
             slug: "user/49dfa850",
             confidence: 9
+        },
+
+    
+        {
+            username: "Augodyne",
+            elo: 1076.511647616106,
+            region: "UNK",
+            slug: "user/4bb1aab3",
+            confidence: 7
+        },
+
+    
+        {
+            username: "Boogius",
+            elo: 1076.4286092467448,
+            region: "NA",
+            slug: "user/731b80a3",
+            confidence: 3
         },
 
     
@@ -2945,20 +2954,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "YUKARIMETA",
-            elo: 1072.7719279880966,
+            username: "Rennikz",
+            elo: 1072.9077630108293,
             region: "NA",
-            slug: "user/9a951dfd",
-            confidence: 1
+            slug: "user/1ef47506",
+            confidence: 3
         },
 
     
         {
-            username: "Augodyne",
-            elo: 1070.9750984674467,
+            username: "Night_Hunter47",
+            elo: 1070.8350334812505,
             region: "UNK",
-            slug: "user/4bb1aab3",
-            confidence: 7
+            slug: "user/ce6ace6e",
+            confidence: 3
         },
 
     
@@ -2973,7 +2982,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "wubbiq",
-            elo: 1066.1975697119587,
+            elo: 1069.1872235942758,
             region: "NA",
             slug: "user/4aece8e1",
             confidence: 7
@@ -2982,7 +2991,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Pastrock",
-            elo: 1062.807641256368,
+            elo: 1063.4018366321393,
             region: "SA",
             slug: "user/5c0952ca",
             confidence: 3
@@ -2991,18 +3000,9 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "IRONGOD",
-            elo: 1062.0264620968685,
+            elo: 1061.1351621973547,
             region: "NA",
             slug: "user/2afafb89",
-            confidence: 3
-        },
-
-    
-        {
-            username: "Night_Hunter47",
-            elo: 1060.0890746015436,
-            region: "UNK",
-            slug: "user/ce6ace6e",
             confidence: 3
         },
 
@@ -3035,6 +3035,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Gold InGarnet",
+            elo: 1056.1016425452003,
+            region: "NA",
+            slug: "user/fd7d2aa6",
+            confidence: 9
+        },
+
+    
+        {
             username: "sabredog",
             elo: 1055.2427284576881,
             region: "NA",
@@ -3044,17 +3053,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Son Chris",
-            elo: 1052.5951429342947,
-            region: "NA",
-            slug: "user/370e73ef",
-            confidence: 3
-        },
-
-    
-        {
             username: "Red",
-            elo: 1052.5258220807627,
+            elo: 1053.3497619875398,
             region: "SA",
             slug: "user/b7500998",
             confidence: 3
@@ -3063,7 +3063,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "BirdGang",
-            elo: 1051.152633040879,
+            elo: 1052.9392155775547,
             region: "NA",
             slug: "user/fc2cce1c",
             confidence: 5
@@ -3071,11 +3071,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Gold InGarnet",
-            elo: 1048.2608593316731,
-            region: "NA",
-            slug: "user/fd7d2aa6",
-            confidence: 9
+            username: "Setsunae",
+            elo: 1047.583330410492,
+            region: "EU",
+            slug: "user/75bc6a9f",
+            confidence: 3
         },
 
     
@@ -3098,6 +3098,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "BeanutButterBud",
+            elo: 1044.8190919505662,
+            region: "NA",
+            slug: "user/88d57280",
+            confidence: 13
+        },
+
+    
+        {
             username: "Greebo",
             elo: 1044.121311429536,
             region: "NA",
@@ -3107,44 +3116,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Setsunae",
-            elo: 1042.877780416168,
-            region: "EU",
-            slug: "user/75bc6a9f",
-            confidence: 3
-        },
-
-    
-        {
-            username: "BeanutButterBud",
-            elo: 1037.9584714456134,
-            region: "NA",
-            slug: "user/88d57280",
-            confidence: 13
-        },
-
-    
-        {
-            username: "Larp",
-            elo: 1036.0393590087042,
-            region: "NA",
-            slug: "user/b4d8578e",
-            confidence: 4
-        },
-
-    
-        {
-            username: "Jazzcuzzi",
-            elo: 1032.3546851084868,
-            region: "NA",
-            slug: "user/3326c44c",
-            confidence: 5
-        },
-
-    
-        {
             username: "Regulus",
-            elo: 1032.3181585514355,
+            elo: 1040.9630304771476,
             region: "NA",
             slug: "user/0fdc85d2",
             confidence: 3
@@ -3152,8 +3125,26 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Jazzcuzzi",
+            elo: 1038.8053181094326,
+            region: "NA",
+            slug: "user/3326c44c",
+            confidence: 5
+        },
+
+    
+        {
+            username: "Larp",
+            elo: 1036.9454769863687,
+            region: "NA",
+            slug: "user/b4d8578e",
+            confidence: 4
+        },
+
+    
+        {
             username: "izank11",
-            elo: 1027.6472124989023,
+            elo: 1032.7017865254477,
             region: "EU",
             slug: "user/21a74f03",
             confidence: 4
@@ -3161,17 +3152,44 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Zarlet",
-            elo: 1025.0069247352226,
+            username: "JrJam",
+            elo: 1032.5321774889192,
             region: "NA",
-            slug: "user/f7d2e818",
-            confidence: 10
+            slug: "user/21423639",
+            confidence: 3
+        },
+
+    
+        {
+            username: "Son Chris",
+            elo: 1030.528409523354,
+            region: "NA",
+            slug: "user/370e73ef",
+            confidence: 3
+        },
+
+    
+        {
+            username: "Yanase Koi",
+            elo: 1029.144833535029,
+            region: "NA",
+            slug: "user/d0181ec4",
+            confidence: 28
+        },
+
+    
+        {
+            username: "Cytosine",
+            elo: 1027.7898071016898,
+            region: "NA",
+            slug: "user/0a3458f5",
+            confidence: 2
         },
 
     
         {
             username: "Haji",
-            elo: 1024.6318865678506,
+            elo: 1026.3781737804886,
             region: "NA",
             slug: "user/f6448670",
             confidence: 8
@@ -3179,11 +3197,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Yanase Koi",
-            elo: 1024.551434799402,
+            username: "Zarlet",
+            elo: 1025.8898481652516,
             region: "NA",
-            slug: "user/d0181ec4",
-            confidence: 28
+            slug: "user/f7d2e818",
+            confidence: 10
         },
 
     
@@ -3192,15 +3210,6 @@ export const rating_list:Array<UserRatingItem> = [
             elo: 1024.2330686964908,
             region: "NA",
             slug: "user/ad9447f4",
-            confidence: 2
-        },
-
-    
-        {
-            username: "Cytosine",
-            elo: 1023.4111682293559,
-            region: "NA",
-            slug: "user/0a3458f5",
             confidence: 2
         },
 
@@ -3225,9 +3234,18 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Hero M#",
-            elo: 1011.1205273000035,
+            elo: 1011.9953786400735,
             region: "NA",
             slug: "user/d405cd37",
+            confidence: 2
+        },
+
+    
+        {
+            username: "Samael",
+            elo: 1011.7742507623682,
+            region: "NA",
+            slug: "user/c1665a3e",
             confidence: 2
         },
 
@@ -3242,11 +3260,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "NightWolf3348",
+            elo: 1008.5669591827568,
+            region: "UNK",
+            slug: "user/648eab47",
+            confidence: 3
+        },
+
+    
+        {
             username: "Eternum",
             elo: 1005.9861601495534,
             region: "NA",
             slug: "user/d52c923c",
             confidence: 10
+        },
+
+    
+        {
+            username: "10PCSpicyNuggets",
+            elo: 1004.109207657705,
+            region: "NA",
+            slug: "user/f5b995bb",
+            confidence: 3
         },
 
     
@@ -3260,26 +3296,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "10PCSpicyNuggets",
-            elo: 1002.6259106820304,
-            region: "NA",
-            slug: "user/f5b995bb",
-            confidence: 3
-        },
-
-    
-        {
-            username: "NightWolf3348",
-            elo: 1001.8376617783779,
-            region: "UNK",
-            slug: "user/648eab47",
-            confidence: 3
-        },
-
-    
-        {
             username: "anonanon",
-            elo: 1000.1351564831122,
+            elo: 1001.468588358606,
             region: "NA",
             slug: "user/b7ee11ee",
             confidence: 4
@@ -3287,20 +3305,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "JrJam",
-            elo: 997.951812445296,
-            region: "NA",
-            slug: "user/21423639",
+            username: "Elitebabar25",
+            elo: 1001.1648411418424,
+            region: "EU",
+            slug: "user/866cd5d9",
+            confidence: 19
+        },
+
+    
+        {
+            username: "Sena",
+            elo: 996.5718422805023,
+            region: "SA",
+            slug: "user/6fb86b37",
             confidence: 3
         },
 
     
         {
-            username: "Haru",
-            elo: 996.1639192742786,
+            username: "Corny",
+            elo: 996.0413550859478,
             region: "NA",
-            slug: "user/407b64ff",
-            confidence: 2
+            slug: "user/634f1262",
+            confidence: 3
         },
 
     
@@ -3314,11 +3341,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Sena",
-            elo: 995.6024932805103,
-            region: "SA",
-            slug: "user/6fb86b37",
-            confidence: 3
+            username: "Haru",
+            elo: 995.3298600177613,
+            region: "NA",
+            slug: "user/407b64ff",
+            confidence: 2
         },
 
     
@@ -3328,24 +3355,6 @@ export const rating_list:Array<UserRatingItem> = [
             region: "EU",
             slug: "user/d0fb9d0d",
             confidence: 2
-        },
-
-    
-        {
-            username: "Corny",
-            elo: 994.1684073942579,
-            region: "NA",
-            slug: "user/634f1262",
-            confidence: 3
-        },
-
-    
-        {
-            username: "Elitebabar25",
-            elo: 994.1315071279714,
-            region: "EU",
-            slug: "user/866cd5d9",
-            confidence: 19
         },
 
     
@@ -3360,7 +3369,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Ssj3enderman",
-            elo: 990.9323323482378,
+            elo: 990.4070680767279,
             region: "NA",
             slug: "user/99442bb3",
             confidence: 5
@@ -3377,20 +3386,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Lucy the Lamia",
+            elo: 987.4335123914944,
+            region: "NA",
+            slug: "user/9b67998a",
+            confidence: 5
+        },
+
+    
+        {
+            username: "GeneralMidwest",
+            elo: 984.9885659467545,
+            region: "NA",
+            slug: "user/14364d39",
+            confidence: 1
+        },
+
+    
+        {
             username: "RavenCaol",
             elo: 984.8712147266517,
             region: "UNK",
             slug: "user/bf47b7d7",
             confidence: 3
-        },
-
-    
-        {
-            username: "Lucy the Lamia",
-            elo: 983.1781917506335,
-            region: "NA",
-            slug: "user/9b67998a",
-            confidence: 5
         },
 
     
@@ -3404,26 +3422,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "snakeytiger",
-            elo: 982.4679154120216,
+            username: "Arcaknight7s",
+            elo: 982.6114248809243,
             region: "NA",
-            slug: "user/25c77df9",
-            confidence: 3
-        },
-
-    
-        {
-            username: "GeneralMidwest",
-            elo: 978.3850821971885,
-            region: "NA",
-            slug: "user/14364d39",
-            confidence: 1
+            slug: "user/616cca2c",
+            confidence: 2
         },
 
     
         {
             username: "Snackcakes",
-            elo: 977.9583144566168,
+            elo: 978.0621189383603,
             region: "NA",
             slug: "user/2a85e43f",
             confidence: 2
@@ -3440,6 +3449,24 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Xiii",
+            elo: 977.5559048784361,
+            region: "NA",
+            slug: "user/d3fb358d",
+            confidence: 2
+        },
+
+    
+        {
+            username: "Ruby Slinger",
+            elo: 977.535579917203,
+            region: "NA",
+            slug: "user/196a9e35",
+            confidence: 2
+        },
+
+    
+        {
             username: "MH Rox",
             elo: 975.7889399268612,
             region: "NA",
@@ -3450,7 +3477,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "CocoJudgesYou",
-            elo: 975.5334809689462,
+            elo: 975.5944840763209,
             region: "NA",
             slug: "user/c879ce4d",
             confidence: 3
@@ -3467,11 +3494,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Ruby Slinger",
-            elo: 975.0844273109128,
+            username: "Meld",
+            elo: 975.1695117782026,
             region: "NA",
-            slug: "user/196a9e35",
-            confidence: 2
+            slug: "user/4c6dac53",
+            confidence: 1
+        },
+
+    
+        {
+            username: "Greatmario64",
+            elo: 974.6450161220396,
+            region: "NA",
+            slug: "user/a25e81b9",
+            confidence: 7
         },
 
     
@@ -3485,38 +3521,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Arcaknight7s",
-            elo: 971.4128138714107,
+            username: "iDivineSleep",
+            elo: 969.7299304078657,
             region: "NA",
-            slug: "user/616cca2c",
+            slug: "user/d17d337b",
             confidence: 2
-        },
-
-    
-        {
-            username: "FGCConex",
-            elo: 971.3479859825778,
-            region: "NA",
-            slug: "user/fbefc4eb",
-            confidence: 6
-        },
-
-    
-        {
-            username: "Xiii",
-            elo: 971.2002981125736,
-            region: "NA",
-            slug: "user/d3fb358d",
-            confidence: 2
-        },
-
-    
-        {
-            username: "Greatmario64",
-            elo: 970.0687464309253,
-            region: "NA",
-            slug: "user/a25e81b9",
-            confidence: 7
         },
 
     
@@ -3530,11 +3539,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "iDivineSleep",
-            elo: 967.2891591494978,
-            region: "NA",
-            slug: "user/d17d337b",
-            confidence: 2
+            username: "Chicken Fish",
+            elo: 966.305864686069,
+            region: "EU",
+            slug: "user/dbfd16f6",
+            confidence: 33
         },
 
     
@@ -3548,6 +3557,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Forgoten",
+            elo: 964.1996765391125,
+            region: "NA",
+            slug: "user/d60ab447",
+            confidence: 21
+        },
+
+    
+        {
             username: "Asmodean95",
             elo: 963.7345103684501,
             region: "NA",
@@ -3557,11 +3575,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Forgoten",
-            elo: 961.0239105646169,
+            username: "jak_d_ripr",
+            elo: 962.5225068294596,
             region: "NA",
-            slug: "user/d60ab447",
-            confidence: 21
+            slug: "user/0827c2d3",
+            confidence: 12
         },
 
     
@@ -3576,7 +3594,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "CallMe Collin",
-            elo: 959.1052164459996,
+            elo: 959.7166098097518,
             region: "NA",
             slug: "user/19340722",
             confidence: 1
@@ -3594,7 +3612,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Zamurai Cris",
-            elo: 958.8230381592241,
+            elo: 958.8694527174212,
             region: "NA",
             slug: "user/3bbfaf54",
             confidence: 2
@@ -3603,7 +3621,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Cure Dynamic",
-            elo: 956.4604307891584,
+            elo: 957.4673922462634,
             region: "NA",
             slug: "user/c8fe8393",
             confidence: 2
@@ -3611,11 +3629,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "jak_d_ripr",
-            elo: 956.2512566127604,
+            username: "snakeytiger",
+            elo: 956.8697171230211,
             region: "NA",
-            slug: "user/0827c2d3",
-            confidence: 12
+            slug: "user/25c77df9",
+            confidence: 3
         },
 
     
@@ -3630,19 +3648,10 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "chielover",
-            elo: 953.5079174514647,
+            elo: 954.7332902624963,
             region: "NA",
             slug: "user/8a5d6f2d",
             confidence: 1
-        },
-
-    
-        {
-            username: "Chicken Fish",
-            elo: 952.1628012549795,
-            region: "EU",
-            slug: "user/dbfd16f6",
-            confidence: 33
         },
 
     
@@ -3656,17 +3665,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Samael",
-            elo: 949.6312297042966,
-            region: "NA",
-            slug: "user/c1665a3e",
-            confidence: 2
+            username: "alloyraven",
+            elo: 945.9084926757637,
+            region: "EU",
+            slug: "user/1456c3f2",
+            confidence: 12
         },
 
     
         {
             username: "DCGrz",
-            elo: 943.8312925964315,
+            elo: 944.6532420567297,
             region: "SA",
             slug: "user/fa3b57bc",
             confidence: 5
@@ -3683,6 +3692,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Reb!!",
+            elo: 940.3987226762113,
+            region: "EU",
+            slug: "user/94d6acd4",
+            confidence: 3
+        },
+
+    
+        {
             username: "Astuarte",
             elo: 939.0245470944328,
             region: "NA",
@@ -3692,11 +3710,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Swag and Watch",
-            elo: 936.1177651940476,
-            region: "NA",
-            slug: "user/11736757",
-            confidence: 4
+            username: "AngryCheese",
+            elo: 937.5805522779716,
+            region: "UNK",
+            slug: "user/b8331d2d",
+            confidence: 2
         },
 
     
@@ -3710,11 +3728,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Reb!!",
-            elo: 935.3180088523038,
-            region: "EU",
-            slug: "user/94d6acd4",
-            confidence: 3
+            username: "Special Schmix",
+            elo: 935.3363860084344,
+            region: "NA",
+            slug: "user/3c1c102a",
+            confidence: 5
         },
 
     
@@ -3728,17 +3746,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "alloyraven",
-            elo: 932.5435379942187,
-            region: "EU",
-            slug: "user/1456c3f2",
-            confidence: 12
-        },
-
-    
-        {
             username: "warxt",
-            elo: 926.5195010930586,
+            elo: 933.8413479525504,
             region: "UNK",
             slug: "user/93caff34",
             confidence: 6
@@ -3747,7 +3756,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "TheGrizz57",
-            elo: 923.656109371869,
+            elo: 929.8867849250069,
             region: "NA",
             slug: "user/13c9c8bf",
             confidence: 13
@@ -3755,28 +3764,28 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Special Schmix",
-            elo: 921.9921369673474,
+            username: "Swag and Watch",
+            elo: 927.4906466452275,
             region: "NA",
-            slug: "user/3c1c102a",
-            confidence: 5
-        },
-
-    
-        {
-            username: "AngryCheese",
-            elo: 921.0505180778243,
-            region: "UNK",
-            slug: "user/b8331d2d",
-            confidence: 2
+            slug: "user/11736757",
+            confidence: 4
         },
 
     
         {
             username: "X-Cal",
-            elo: 920.9360767402136,
+            elo: 922.8372027474732,
             region: "NA",
             slug: "user/9214d207",
+            confidence: 2
+        },
+
+    
+        {
+            username: "tylerGplays",
+            elo: 921.1544924716262,
+            region: "UNK",
+            slug: "user/19b49def",
             confidence: 2
         },
 
@@ -3801,7 +3810,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "melody?",
-            elo: 918.0399497519903,
+            elo: 919.6574179690382,
             region: "NA",
             slug: "user/b4ee975c",
             confidence: 3
@@ -3809,17 +3818,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "tylerGplays",
-            elo: 916.8430101322288,
-            region: "UNK",
-            slug: "user/19b49def",
+            username: "falling_robin",
+            elo: 915.5920187795944,
+            region: "NA",
+            slug: "user/9e4a95f3",
             confidence: 2
         },
 
     
         {
             username: "LeDom",
-            elo: 913.1783007118704,
+            elo: 913.2088838958136,
             region: "NA",
             slug: "user/b5d2a392",
             confidence: 10
@@ -3845,29 +3854,29 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Meld",
-            elo: 911.0575648202928,
+            username: "FGCConex",
+            elo: 911.8990862639217,
             region: "NA",
-            slug: "user/4c6dac53",
-            confidence: 1
-        },
-
-    
-        {
-            username: "falling_robin",
-            elo: 910.1431632802237,
-            region: "NA",
-            slug: "user/9e4a95f3",
-            confidence: 2
+            slug: "user/fbefc4eb",
+            confidence: 3
         },
 
     
         {
             username: "Foam Root",
-            elo: 909.51100728335,
+            elo: 910.4335303388044,
             region: "NA",
             slug: "user/1c53abf2",
             confidence: 3
+        },
+
+    
+        {
+            username: "Joseca500",
+            elo: 909.3488601330021,
+            region: "EU",
+            slug: "user/ad94c00c",
+            confidence: 2
         },
 
     
@@ -3881,11 +3890,38 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Joseca500",
-            elo: 904.9597618061163,
-            region: "EU",
-            slug: "user/ad94c00c",
+            username: "gravitypenguin",
+            elo: 906.3889457541195,
+            region: "NA",
+            slug: "user/3d381eb6",
             confidence: 2
+        },
+
+    
+        {
+            username: "Sora",
+            elo: 903.5027256868711,
+            region: "NA",
+            slug: "user/8b5441d9",
+            confidence: 2
+        },
+
+    
+        {
+            username: "ArcEltare",
+            elo: 900.5860354617586,
+            region: "NA",
+            slug: "user/7a84ab4a",
+            confidence: 2
+        },
+
+    
+        {
+            username: "ShiroTheHero",
+            elo: 899.3740716340446,
+            region: "NA",
+            slug: "user/54a4cbae",
+            confidence: 3
         },
 
     
@@ -3899,28 +3935,19 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "ShiroTheHero",
-            elo: 898.362913271249,
+            username: "Spectrum",
+            elo: 891.9300214838773,
             region: "NA",
-            slug: "user/54a4cbae",
-            confidence: 3
-        },
-
-    
-        {
-            username: "gravitypenguin",
-            elo: 895.7823985079281,
-            region: "NA",
-            slug: "user/3d381eb6",
+            slug: "user/3cddb197",
             confidence: 2
         },
 
     
         {
-            username: "Sora",
-            elo: 894.5842390351338,
+            username: "Espada",
+            elo: 891.7183759664272,
             region: "NA",
-            slug: "user/8b5441d9",
+            slug: "user/92297e78",
             confidence: 2
         },
 
@@ -3935,17 +3962,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Espada",
-            elo: 890.0366153879659,
-            region: "NA",
-            slug: "user/92297e78",
-            confidence: 2
-        },
-
-    
-        {
             username: "Cheerustre",
-            elo: 889.7620660685736,
+            elo: 891.1539154592967,
             region: "NA",
             slug: "user/7f275363",
             confidence: 7
@@ -3971,10 +3989,10 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "ArcEltare",
-            elo: 886.641428899728,
+            username: "Primecore28",
+            elo: 885.4086929530181,
             region: "NA",
-            slug: "user/7a84ab4a",
+            slug: "user/d79f1d24",
             confidence: 2
         },
 
@@ -3989,10 +4007,10 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Spectrum",
-            elo: 884.7635268574822,
+            username: "AKu",
+            elo: 884.262158184971,
             region: "NA",
-            slug: "user/3cddb197",
+            slug: "user/041e8fc4",
             confidence: 2
         },
 
@@ -4007,11 +4025,47 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Rodimus Prime",
+            elo: 884.1388747297378,
+            region: "NA",
+            slug: "user/821eef35",
+            confidence: 13
+        },
+
+    
+        {
             username: "ZeperTheStar",
             elo: 883.6829749806645,
             region: "NA",
             slug: "user/c35d9549",
             confidence: 3
+        },
+
+    
+        {
+            username: "Wynzki",
+            elo: 882.7992389629956,
+            region: "NA",
+            slug: "user/d9473976",
+            confidence: 2
+        },
+
+    
+        {
+            username: "kaen",
+            elo: 881.7008278970708,
+            region: "NA",
+            slug: "user/639483ac",
+            confidence: 2
+        },
+
+    
+        {
+            username: "Garumb",
+            elo: 881.6287794655426,
+            region: "NA",
+            slug: "user/00d0529e",
+            confidence: 10
         },
 
     
@@ -4025,37 +4079,19 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "kaen",
-            elo: 880.5539421455421,
+            username: "Vurger",
+            elo: 876.815709741434,
             region: "NA",
-            slug: "user/639483ac",
-            confidence: 2
+            slug: "user/72d44357",
+            confidence: 4
         },
 
     
         {
-            username: "Garumb",
-            elo: 879.5764670365122,
+            username: "Luff",
+            elo: 876.3415460088667,
             region: "NA",
-            slug: "user/00d0529e",
-            confidence: 10
-        },
-
-    
-        {
-            username: "Rodimus Prime",
-            elo: 878.4028617589028,
-            region: "NA",
-            slug: "user/821eef35",
-            confidence: 13
-        },
-
-    
-        {
-            username: "Wynzki",
-            elo: 875.9657805317256,
-            region: "NA",
-            slug: "user/d9473976",
+            slug: "user/5e00823d",
             confidence: 2
         },
 
@@ -4070,28 +4106,10 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Luff",
-            elo: 873.6453438674838,
+            username: "PhilSchwifty",
+            elo: 870.9910088950685,
             region: "NA",
-            slug: "user/5e00823d",
-            confidence: 2
-        },
-
-    
-        {
-            username: "Vurger",
-            elo: 871.7218203137745,
-            region: "NA",
-            slug: "user/72d44357",
-            confidence: 4
-        },
-
-    
-        {
-            username: "AKu",
-            elo: 870.1232292449415,
-            region: "NA",
-            slug: "user/041e8fc4",
+            slug: "user/c1562482",
             confidence: 2
         },
 
@@ -4106,17 +4124,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "PhilSchwifty",
-            elo: 858.8492924102493,
-            region: "NA",
-            slug: "user/c1562482",
-            confidence: 2
-        },
-
-    
-        {
             username: "Moose",
-            elo: 857.7147359353075,
+            elo: 860.3555691435115,
             region: "NA",
             slug: "user/7c2711a3",
             confidence: 4
@@ -4124,10 +4133,10 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Primecore28",
-            elo: 854.0353602168384,
+            username: "Senpapi512",
+            elo: 854.2914199990084,
             region: "NA",
-            slug: "user/d79f1d24",
+            slug: "user/b081a8fc",
             confidence: 2
         },
 
@@ -4142,10 +4151,19 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Senpapi512",
-            elo: 850.070021720099,
+            username: "Dick",
+            elo: 851.7994356764643,
             region: "NA",
-            slug: "user/b081a8fc",
+            slug: "user/431fe6ae",
+            confidence: 4
+        },
+
+    
+        {
+            username: "GearDragon",
+            elo: 849.8037458973098,
+            region: "NA",
+            slug: "user/91ccb79e",
             confidence: 2
         },
 
@@ -4161,7 +4179,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "pdhewitt",
-            elo: 849.6296848805518,
+            elo: 849.6787137668919,
             region: "NA",
             slug: "user/6f730045",
             confidence: 4
@@ -4169,10 +4187,28 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "GearDragon",
-            elo: 846.9691712322602,
+            username: "Yexrobd",
+            elo: 849.6044931651824,
             region: "NA",
-            slug: "user/91ccb79e",
+            slug: "user/db009a46",
+            confidence: 2
+        },
+
+    
+        {
+            username: "Redlykerozes",
+            elo: 849.478433693395,
+            region: "NA",
+            slug: "user/fe498354",
+            confidence: 4
+        },
+
+    
+        {
+            username: "The Doorman",
+            elo: 848.8003730220455,
+            region: "NA",
+            slug: "user/d6d6308d",
             confidence: 2
         },
 
@@ -4205,11 +4241,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Dick",
-            elo: 843.8783827626462,
+            username: "Speed Weed",
+            elo: 845.4187265133767,
             region: "NA",
-            slug: "user/431fe6ae",
-            confidence: 4
+            slug: "user/f534db4c",
+            confidence: 2
         },
 
     
@@ -4241,35 +4277,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Speed Weed",
-            elo: 840.3460046689861,
-            region: "NA",
-            slug: "user/f534db4c",
-            confidence: 2
-        },
-
-    
-        {
-            username: "The Doorman",
-            elo: 839.1427179192647,
-            region: "NA",
-            slug: "user/d6d6308d",
-            confidence: 2
-        },
-
-    
-        {
-            username: "Redlykerozes",
-            elo: 837.6604313983476,
-            region: "NA",
-            slug: "user/fe498354",
-            confidence: 4
-        },
-
-    
-        {
             username: "NepGear",
-            elo: 837.3244833384886,
+            elo: 838.9953466403355,
             region: "NA",
             slug: "user/8ba5a69e",
             confidence: 2
@@ -4277,8 +4286,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Okano35",
+            elo: 838.1142508380981,
+            region: "NA",
+            slug: "user/c9ac63b5",
+            confidence: 2
+        },
+
+    
+        {
             username: "Durandal",
-            elo: 834.8648141242463,
+            elo: 837.4409225955774,
             region: "NA",
             slug: "user/cdfdb725",
             confidence: 5
@@ -4295,17 +4313,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Okano35",
-            elo: 833.6503975359894,
-            region: "NA",
-            slug: "user/c9ac63b5",
-            confidence: 2
-        },
-
-    
-        {
             username: "MKQueazy",
-            elo: 833.5645549603483,
+            elo: 833.8090638294314,
             region: "NA",
             slug: "user/ed91b2fb",
             confidence: 2
@@ -4314,7 +4323,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Omega",
-            elo: 829.7573744134509,
+            elo: 831.7760465818258,
             region: "NA",
             slug: "user/7c268f4a",
             confidence: 2
@@ -4349,6 +4358,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Scuts",
+            elo: 819.7497622312617,
+            region: "NA",
+            slug: "user/73c69d4e",
+            confidence: 3
+        },
+
+    
+        {
             username: "Keanu",
             elo: 818.9383637869914,
             region: "OCE",
@@ -4358,17 +4376,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Scuts",
-            elo: 813.965165685175,
+            username: "FlamingPit123",
+            elo: 818.5718494878404,
             region: "NA",
-            slug: "user/73c69d4e",
-            confidence: 3
+            slug: "user/5bc44f1a",
+            confidence: 2
         },
 
     
         {
             username: "DetectiveThief",
-            elo: 811.092535245235,
+            elo: 817.2115203269607,
             region: "NA",
             slug: "user/b13bcd15",
             confidence: 2
@@ -4377,10 +4395,19 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "luckidyne",
-            elo: 810.3783428273098,
+            elo: 812.0973824337891,
             region: "UNK",
             slug: "user/13f24174",
             confidence: 5
+        },
+
+    
+        {
+            username: "Basil_Underscore",
+            elo: 811.739313464337,
+            region: "NA",
+            slug: "user/53028014",
+            confidence: 2
         },
 
     
@@ -4421,6 +4448,24 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "YUKARIMETA",
+            elo: 805.1378610987026,
+            region: "NA",
+            slug: "user/3a8a318e",
+            confidence: 2
+        },
+
+    
+        {
+            username: "Dandy Mancannon",
+            elo: 802.3820797388662,
+            region: "NA",
+            slug: "user/baf7e431",
+            confidence: 5
+        },
+
+    
+        {
             username: "KiaRio",
             elo: 802.1397843063121,
             region: "NA",
@@ -4430,11 +4475,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Basil_Underscore",
-            elo: 801.2345129277061,
+            username: "Chriswill1984",
+            elo: 798.4747469609713,
             region: "NA",
-            slug: "user/53028014",
+            slug: "user/33b0ac61",
             confidence: 2
+        },
+
+    
+        {
+            username: "Mookeh",
+            elo: 796.3531833608872,
+            region: "UNK",
+            slug: "user/dc4ad8b8",
+            confidence: 4
         },
 
     
@@ -4448,35 +4502,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "FlamingPit123",
-            elo: 793.2454897214297,
-            region: "NA",
-            slug: "user/5bc44f1a",
-            confidence: 2
-        },
-
-    
-        {
-            username: "Dandy Mancannon",
-            elo: 792.7859236977768,
-            region: "NA",
-            slug: "user/baf7e431",
-            confidence: 5
-        },
-
-    
-        {
-            username: "Mookeh",
-            elo: 791.2505013845248,
-            region: "UNK",
-            slug: "user/dc4ad8b8",
-            confidence: 4
-        },
-
-    
-        {
             username: "Ab",
-            elo: 790.7873571681423,
+            elo: 795.146930680381,
             region: "EU",
             slug: "user/df0b46f3",
             confidence: 2
@@ -4484,19 +4511,19 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Dark Slayer",
-            elo: 787.6177559006152,
+            username: "Sweetener",
+            elo: 792.0352630579266,
             region: "NA",
-            slug: "user/e7fe8bbc",
+            slug: "user/ef4f3289",
             confidence: 2
         },
 
     
         {
-            username: "Chriswill1984",
-            elo: 787.3433100666767,
+            username: "Dark Slayer",
+            elo: 786.7803644492625,
             region: "NA",
-            slug: "user/33b0ac61",
+            slug: "user/e7fe8bbc",
             confidence: 2
         },
 
@@ -4511,17 +4538,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "YUKARIMETA",
-            elo: 784.7612980982271,
-            region: "NA",
-            slug: "user/3a8a318e",
-            confidence: 2
-        },
-
-    
-        {
             username: "Blue Thunder",
-            elo: 782.0960037375555,
+            elo: 782.9220667376122,
             region: "NA",
             slug: "user/88c8306b",
             confidence: 5
@@ -4538,29 +4556,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Sweetener",
-            elo: 780.9293993990693,
-            region: "NA",
-            slug: "user/ef4f3289",
-            confidence: 2
-        },
-
-    
-        {
             username: "CrispyBoi",
             elo: 779.5766380440571,
             region: "NA",
             slug: "user/0a9f50c7",
             confidence: 2
-        },
-
-    
-        {
-            username: "a schwa",
-            elo: 776.8720245440662,
-            region: "NA",
-            slug: "user/7b63c99e",
-            confidence: 1
         },
 
     
@@ -4574,17 +4574,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "JazzMo",
-            elo: 770.9519093533065,
-            region: "NA",
-            slug: "user/901b68b4",
-            confidence: 2
-        },
-
-    
-        {
             username: "Tron_ultimate_XX",
-            elo: 767.2952488450763,
+            elo: 772.2719469551721,
             region: "EU",
             slug: "user/f1c9d121",
             confidence: 19
@@ -4592,8 +4583,26 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "a schwa",
+            elo: 771.8361218618303,
+            region: "NA",
+            slug: "user/7b63c99e",
+            confidence: 1
+        },
+
+    
+        {
+            username: "JazzMo",
+            elo: 771.2838901924079,
+            region: "NA",
+            slug: "user/901b68b4",
+            confidence: 2
+        },
+
+    
+        {
             username: "Kentoki",
-            elo: 764.8071056479229,
+            elo: 764.8545232322668,
             region: "NA",
             slug: "user/1aecfdd1",
             confidence: 5
@@ -4602,7 +4611,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "WheresMyKeys",
-            elo: 764.444577883472,
+            elo: 764.8134397646213,
             region: "NA",
             slug: "user/cce78c7b",
             confidence: 2
@@ -4611,7 +4620,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "LightSpeed",
-            elo: 763.6141862981134,
+            elo: 764.4852669832075,
             region: "NA",
             slug: "user/ce1048cc",
             confidence: 4
@@ -4620,7 +4629,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Schwi",
-            elo: 761.0311423357117,
+            elo: 761.4322612335806,
             region: "SA",
             slug: "user/fe1959d8",
             confidence: 2
@@ -4629,7 +4638,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Manil",
-            elo: 752.7173859462071,
+            elo: 752.8026875086191,
             region: "NA",
             slug: "user/b386a129",
             confidence: 5
@@ -4655,6 +4664,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Hikikomari",
+            elo: 747.7637355631069,
+            region: "UNK",
+            slug: "user/9c57cbdb",
+            confidence: 2
+        },
+
+    
+        {
             username: "Clob",
             elo: 747.5903325733252,
             region: "EU",
@@ -4664,20 +4682,20 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Hikikomari",
-            elo: 740.6530172355715,
-            region: "UNK",
-            slug: "user/9c57cbdb",
+            username: "Juicey",
+            elo: 737.0773238638238,
+            region: "NA",
+            slug: "user/cb473b9b",
             confidence: 2
         },
 
     
         {
-            username: "Juicey",
-            elo: 735.5771927521483,
+            username: "mintjulep",
+            elo: 729.9240166410935,
             region: "NA",
-            slug: "user/cb473b9b",
-            confidence: 2
+            slug: "user/4e591699",
+            confidence: 6
         },
 
     
@@ -4710,7 +4728,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Pigeta",
-            elo: 721.3259031407147,
+            elo: 722.138203669552,
             region: "SA",
             slug: "user/c4451f1b",
             confidence: 2
@@ -4727,11 +4745,11 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "mintjulep",
-            elo: 717.6421766344206,
+            username: "TRON",
+            elo: 717.4663730977335,
             region: "NA",
-            slug: "user/4e591699",
-            confidence: 6
+            slug: "user/0518b11f",
+            confidence: 2
         },
 
     
@@ -4741,6 +4759,15 @@ export const rating_list:Array<UserRatingItem> = [
             region: "EU",
             slug: "user/f95a0433",
             confidence: 1
+        },
+
+    
+        {
+            username: "icy crystals",
+            elo: 713.8440735450775,
+            region: "NA",
+            slug: "user/83d0732c",
+            confidence: 17
         },
 
     
@@ -4763,44 +4790,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "TRON",
-            elo: 710.5552961875214,
-            region: "NA",
-            slug: "user/0518b11f",
-            confidence: 2
-        },
-
-    
-        {
-            username: "Yexrobd",
-            elo: 703.4961508942652,
-            region: "NA",
-            slug: "user/db009a46",
-            confidence: 2
-        },
-
-    
-        {
-            username: "icy crystals",
-            elo: 701.7739018417014,
-            region: "NA",
-            slug: "user/83d0732c",
-            confidence: 17
-        },
-
-    
-        {
-            username: "xXSaber_Sw0rdXx",
-            elo: 700.0152384066164,
-            region: "NA",
-            slug: "user/81de081e",
-            confidence: 2
-        },
-
-    
-        {
             username: "Stars",
-            elo: 699.9306598910159,
+            elo: 701.7547991785395,
             region: "NA",
             slug: "user/542c1448",
             confidence: 2
@@ -4808,8 +4799,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "xXSaber_Sw0rdXx",
+            elo: 700.0388695042336,
+            region: "NA",
+            slug: "user/81de081e",
+            confidence: 2
+        },
+
+    
+        {
             username: "Solairs74",
-            elo: 696.7000211807988,
+            elo: 696.7528511859855,
             region: "NA",
             slug: "user/5cf9089a",
             confidence: 2
@@ -4827,7 +4827,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "WooperTM",
-            elo: 692.1125968550108,
+            elo: 692.2247431595574,
             region: "NA",
             slug: "user/8eb10c4d",
             confidence: 2
@@ -4836,7 +4836,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "LeFlaurLaFlah",
-            elo: 690.2236328476366,
+            elo: 686.928638997644,
             region: "NA",
             slug: "user/f2a5aaf4",
             confidence: 2
@@ -4872,7 +4872,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "LILBOWT",
-            elo: 675.1257411765175,
+            elo: 678.6319475953954,
             region: "NA",
             slug: "user/041dbfc0",
             confidence: 4
@@ -4881,7 +4881,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "TG",
-            elo: 669.6685945998902,
+            elo: 674.0439490152676,
             region: "EU",
             slug: "user/5a9c11f4",
             confidence: 2
@@ -4890,7 +4890,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "LaraTheLord",
-            elo: 669.1578255044019,
+            elo: 669.1692635529587,
             region: "NA",
             slug: "user/84410020",
             confidence: 1
@@ -4907,8 +4907,17 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Pepega",
+            elo: 662.0295271429219,
+            region: "NA",
+            slug: "user/dccc5171",
+            confidence: 4
+        },
+
+    
+        {
             username: "Makoche",
-            elo: 656.3534017354419,
+            elo: 661.5982074131794,
             region: "EU",
             slug: "user/036e9ab7",
             confidence: 3
@@ -4921,15 +4930,6 @@ export const rating_list:Array<UserRatingItem> = [
             region: "EU",
             slug: "user/870a084e",
             confidence: 2
-        },
-
-    
-        {
-            username: "Pepega",
-            elo: 649.22389920045,
-            region: "NA",
-            slug: "user/dccc5171",
-            confidence: 4
         },
 
     
@@ -4952,6 +4952,15 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
+            username: "Barnstormer",
+            elo: 630.7640526079213,
+            region: "NA",
+            slug: "user/85a6c011",
+            confidence: 2
+        },
+
+    
+        {
             username: "Trashfox",
             elo: 630.739484066197,
             region: "NA",
@@ -4961,17 +4970,8 @@ export const rating_list:Array<UserRatingItem> = [
 
     
         {
-            username: "Barnstormer",
-            elo: 629.8637023559817,
-            region: "NA",
-            slug: "user/85a6c011",
-            confidence: 2
-        },
-
-    
-        {
             username: "Pikmin",
-            elo: 622.0306103267658,
+            elo: 622.0400500928776,
             region: "NA",
             slug: "user/7a9746a9",
             confidence: 2
@@ -4980,7 +4980,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Twak",
-            elo: 605.704210657703,
+            elo: 606.9618453389844,
             region: "NA",
             slug: "user/25ab2217",
             confidence: 2
@@ -4989,7 +4989,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Marius",
-            elo: 596.6752668061044,
+            elo: 597.9351740540098,
             region: "EU",
             slug: "user/0b3bcd63",
             confidence: 1
@@ -4998,7 +4998,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "DubKun",
-            elo: 554.3894224036358,
+            elo: 559.4891136776545,
             region: "NA",
             slug: "user/9b2ca0f4",
             confidence: 2
@@ -5007,7 +5007,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Gree",
-            elo: 552.0840604137941,
+            elo: 552.2488199860861,
             region: "NA",
             slug: "user/f74a9f8e",
             confidence: 4
@@ -5016,7 +5016,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "Richi the Moon",
-            elo: 517.5200893414517,
+            elo: 520.0120584965077,
             region: "NA",
             slug: "user/3927d758",
             confidence: 4
@@ -5025,7 +5025,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "AlexNomas",
-            elo: 509.76076289095226,
+            elo: 510.1271739158419,
             region: "NA",
             slug: "user/5f99ecad",
             confidence: 8
@@ -5034,7 +5034,7 @@ export const rating_list:Array<UserRatingItem> = [
     
         {
             username: "JayNy",
-            elo: 469.6313750703142,
+            elo: 471.4188856158429,
             region: "NA",
             slug: "user/5b719931",
             confidence: 2
