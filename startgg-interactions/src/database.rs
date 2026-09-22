@@ -1,8 +1,7 @@
-use std::time::Duration;
-
+use indicatif::ProgressBar;
 use sqlx::{Pool, Sqlite, SqlitePool};
 
-use crate::{constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, elo::Elo, startgg::{self, StartGG}};
+use crate::{constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, elo::Elo, startgg_v2::StartGG,};
 
 pub struct Database {
     pool:Pool<Sqlite>
@@ -46,8 +45,11 @@ impl Database {
     } 
 
 
-    pub async fn update_with_startgg_information(&self,sgg_object:&StartGG,elo:&Elo) {
+    pub async fn update_with_startgg_information(&self,sgg_object:&mut StartGG,elo:&Elo) {
         let mut requests = 0;
+
+        let user_information_progress_bar = ProgressBar::new(elo.get_users().len() as u64);
+        user_information_progress_bar.set_message("Fetching User Information");
 
         for (uid,_) in elo.get_users() {
 
@@ -71,6 +73,12 @@ impl Database {
             .execute(&self.pool)
             .await
             .unwrap();
+
+            user_information_progress_bar.inc(1);
         }
+
+        user_information_progress_bar.finish_and_clear();
+
+        println!("Done pulling information. Thank you for using FateRank!");
     }
 }

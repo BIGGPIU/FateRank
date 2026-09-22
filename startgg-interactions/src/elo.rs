@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use skillratings::{Outcomes, glicko2::{Glicko2Rating, glicko2}};
 
-use crate::{constants::GLICKO2_CONFIG, startgg::TournamentSet};
+use crate::{constants::GLICKO2_CONFIG, startgg_v2::TournamentSet, };
 
 #[derive(Clone, Copy)]
 pub struct Confidence(pub i64);
