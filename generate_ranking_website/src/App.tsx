@@ -17,7 +17,7 @@ function App() {
                 Changelog
             </a>
             <div className='text-2xl text-white text-center mb-4'>
-                FateRank v1.1.3
+                FateRank v1.1.2
             </div>
             <div className='text-md text-white text-center '>
                 THIS TOOL IS A WORK AND PROGRESS AND NOT 100% ACCURATE. PLEASE VERIFY RESULTS
