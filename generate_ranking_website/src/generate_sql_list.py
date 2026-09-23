@@ -9,14 +9,16 @@ now = datetime.today().strftime('%Y-%m-%d')
 
 print(f"{now}")
 
-tsx = """
-export interface UserRatingItem {
+tsx = f"""
+export const DATE_CREATED = "{now.replace("-","/")}"
+
+export interface UserRatingItem {{
     username:string,
     elo:number,
     region:string,
     slug:string,
     confidence:number
-}
+}}
 
 export const rating_list:Array<UserRatingItem> = [
 

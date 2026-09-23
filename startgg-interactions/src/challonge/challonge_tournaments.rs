@@ -1,6 +1,3 @@
-use json::JsonValue;
-use reqwest::Client;
-use crate::challonge::auth::AUTHENTICATION;
 
 // Would keep but I dont want to add async-traits as a dependency
 // pub trait ChallongeEvent {
@@ -12,25 +9,68 @@ use crate::challonge::auth::AUTHENTICATION;
 //     fn get_first_week() -> u64;
 // }
 
+pub trait ChallongeTournament {
+    /// Returns a vector of all the possible event names for this event
+    /// 
+    /// index: what week after the first one do you want to search for? SHOULD NOT BE NEGATIVE. ISNT A U64 BECAUSE IM DUM AND DUM AND STUPID!
+    fn get_possible_event_names(index:i64) -> Vec<String>;
+
+    fn get_first_week() -> i64;
+}
+
 pub struct WeeklyRebelRumble {
 
 }
 
-
 impl WeeklyRebelRumble {
-    async fn get_event(index:u64,client:Client) -> Option<JsonValue> {
+    pub fn is_skipped_week(index:i64) -> bool {
+        match index + 32 as i64 {
+            46 => {
+                true
+            }
+            _ => {
+                false
+            }
+        }
+    }   
+}
+
+impl ChallongeTournament for WeeklyRebelRumble {
+    /// Returns a vector of all the possible event names for this event
+    fn get_possible_event_names(index:i64) -> Vec<String> {
         let first_week = WeeklyRebelRumble::get_first_week();
+        
 
-        let psn_link = format!("challonge.com/wrr{}bbtagpsn",first_week+index);
-        let xbl_link = format!("challonge.com/wrr{}bbtagxbl",first_week+index);
-        let old_nso_link = format!("challonge.com/wrr{}bbtagsw",first_week+index);
-        let nso_link = format!("challonge.com/wrr{}bbtagnso",first_week+index);
-        let pc_link = format!("challonge.com/wrr{}bbtagpc",first_week+index);
-
-        todo!()
+        vec![
+            format!("wrr{}bbtagsw",first_week+index),
+            format!("wrr{}bbtagxbl",first_week+index),
+            format!("wrr{}bbtagpsn",first_week+index),
+            format!("wrr{}bbtagnso",first_week+index),
+            format!("wrr{}bbtagpc",first_week+index),
+        ]
     }
 
-    const fn get_first_week() -> u64 {
+    fn get_first_week() -> i64 {
         32
+    }
+}
+
+
+pub struct HouseOfCasuals {
+
+}
+
+
+impl ChallongeTournament for HouseOfCasuals {
+    fn get_possible_event_names(index:i64) -> Vec<String> {
+        let first_week = HouseOfCasuals::get_first_week();
+        
+        vec![
+            format!("houseofcasuals{}",first_week+index)
+        ]
+    }
+
+    fn get_first_week() -> i64 {
+        24
     }
 }

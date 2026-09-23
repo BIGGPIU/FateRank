@@ -1,7 +1,7 @@
-use indicatif::ProgressBar;
+use indicatif::{ProgressBar, ProgressStyle};
 use sqlx::{Pool, Sqlite, SqlitePool};
 
-use crate::{constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, elo::Elo, startgg_v2::StartGG,};
+use crate::{challonge::challonge::ChallongeTournamentEvent, constants::{MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, elo::Elo, startgg_v2::StartGG,};
 
 pub struct Database {
     pool:Pool<Sqlite>
@@ -12,23 +12,33 @@ pub struct Database {
 impl Database {
 
     pub async fn new(database_location:&str) -> Self {
+        let pool = SqlitePool::connect(database_location).await.unwrap();
+        
+        Database::clear_user_db(&pool).await;
+
+
         return Self {
-            pool: SqlitePool::connect(database_location).await.unwrap(),
+            pool,
         }
     }
 
-    async fn clear_db(&self) {
+    async fn clear_user_db(pool:&Pool<Sqlite>) {
         sqlx::query::<Sqlite>
         ("DELETE FROM User")
-        .execute(&self.pool)
+        .execute(pool)
+        .await
+        .unwrap();
+    }
+
+    async fn clear_challonge_sets_db(pool:&Pool<Sqlite>) {
+        sqlx::query::<Sqlite>
+        ("DELETE FROM ChallongeSets")
+        .execute(pool)
         .await
         .unwrap();
     }
 
     pub async fn commit_glicko_information(&self,elo:&Elo) {
-        
-        self.clear_db().await;
-
         for (uid,rating) in elo.get_users() {
             sqlx::query::<Sqlite>
             ("INSERT INTO User (startgg_uid,elo,true_elo,deviation,volatility,confidence) VALUES ($1,$2,$5,$3,$4,$6)")
@@ -44,12 +54,43 @@ impl Database {
         }
     } 
 
+    pub async fn update_challonge_set_information(&self, v:Vec<ChallongeTournamentEvent>) {
+        for event in v {
+            for set in event.sets {
+                let sql;
+                
+                if set.standings[0].score > set.standings[1].score {
+                    sql = "INSERT INTO ChallongeSets (winner_name,winner_id,winner_score,loser_name,loser_id,loser_score) VALUES ($1,$2,$3,$4,$5,$6)"
+                }
+                else {
+                    sql = "INSERT INTO ChallongeSets (winner_name,winner_id,winner_score,loser_name,loser_id,loser_score) VALUES ($4,$5,$6,$1,$2,$3)"
+                }
+
+
+                sqlx::query::<Sqlite>
+                (sql)
+                .bind(&set.standings[0].name)
+                .bind(&set.standings[0].id)
+                .bind(&set.standings[0].score)
+                .bind(&set.standings[1].name)
+                .bind(&set.standings[1].id)
+                .bind(&set.standings[1].score)
+                .execute(&self.pool)
+                .await
+                .unwrap();
+            }
+        }
+    }
+
 
     pub async fn update_with_startgg_information(&self,sgg_object:&mut StartGG,elo:&Elo) {
         let mut requests = 0;
 
+        let len = elo.get_users().len();
+
         let user_information_progress_bar = ProgressBar::new(elo.get_users().len() as u64);
-        user_information_progress_bar.set_message("Fetching User Information");
+        user_information_progress_bar.set_style(ProgressStyle::with_template("[{elapsed_precise}] {msg:70} {bar:40.green} [{pos:>7}/{len:7}]").unwrap());
+        user_information_progress_bar.set_message(format!("Fetching User Information (Expeted RateLimit avoids: {})",len/MAX_REQUESTS_PER_MINUTE));
 
         for (uid,_) in elo.get_users() {
 
@@ -77,8 +118,6 @@ impl Database {
             user_information_progress_bar.inc(1);
         }
 
-        user_information_progress_bar.finish_and_clear();
-
-        println!("Done pulling information. Thank you for using FateRank!");
+        user_information_progress_bar.finish_with_message("Finished Pulling User Information");
     }
 }

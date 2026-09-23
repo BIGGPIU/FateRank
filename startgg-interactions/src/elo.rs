@@ -44,7 +44,7 @@ impl Elo {
             t.standings[1].score - t.standings[0].score
         );
 
-        println!("{} - {} Score Difference: {repeat_count}",t.standings[0].id,t.standings[1].id);
+        // println!("{} - {} Score Difference: {repeat_count}",t.standings[0].id,t.standings[1].id);
 
         if t.standings[0].has_won {
             outcome = Outcomes::WIN;

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { rating_list, type UserRatingItem } from './list'
+import { DATE_CREATED, rating_list, type UserRatingItem } from './list'
 import './App.css'
 
 function App() {
@@ -17,13 +17,13 @@ function App() {
                 Changelog
             </a>
             <div className='text-2xl text-white text-center mb-4'>
-                FateRank v1.1.1
+                FateRank v1.1.2
             </div>
             <div className='text-md text-white text-center '>
                 THIS TOOL IS A WORK AND PROGRESS AND NOT 100% ACCURATE. PLEASE VERIFY RESULTS
             </div>
             <div className='text-sm text-white text-center mb-4'>
-                Updated 9/21/2026.
+                Updated {DATE_CREATED}.
             </div>
             <textarea name="" id="" className='left-1/2 -translate-x-1/2 relative bg-white text-black lg:w-lg w-full h-32' placeholder='Filter by Slug (Split by Newlines)' 
             onChange={(v) => {

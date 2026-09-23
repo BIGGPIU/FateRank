@@ -73,7 +73,10 @@ impl StartGG {
             )
             .body(
                 object! {
-                    "query":"query GetTournamentAmount($TournamentPage: Int) {tournaments( query: {page: $TournamentPage, perPage: 256, filter: {videogameIds: [1144], afterDate: 1767225600}, sort: startAt}) { pageInfo { page totalPages } } }"
+                    "query":"query GetTournamentAmount($TournamentPage: Int) {tournaments( query: {page: $TournamentPage, perPage: 256, filter: {videogameIds: [1144], afterDate: 1767225600}, sort: startAt}) { pageInfo { page totalPages } } }",
+                    "variables" : {
+                        "TournamentPage":1
+                    }
                 }.dump()
 
             )
@@ -90,14 +93,16 @@ impl StartGG {
     async fn get_event_set_page_amount(&mut self,event_id:i64) -> i64 {
         request!(self);
 
-        json::parse(
+        let x = json::parse(
             &mut self.client.post(
                 STARTGG_URL
             )
             .body(
                 object! {
                     "query":"query GetSets($EventId: ID) {event(id: $EventId) {sets(page: 1, perPage: 32, sortType: RECENT, filters: {showByes: false}) {pageInfo { totalPages } } } }",
-                    "EventId":event_id
+                    "variables": {
+                        "EventId":event_id
+                    }
                 }.dump()
             )
             .bearer_auth(&mut self.auth_token)
@@ -107,7 +112,9 @@ impl StartGG {
             .text()
             .await
             .unwrap()
-        ).unwrap()["data"]["tournaments"]["pageInfo"]["totalPages"].as_i64().unwrap_or(0)
+        ).unwrap();
+
+        return x["data"]["event"]["sets"]["pageInfo"]["totalPages"].as_i64().unwrap_or(0);
     }
 
 
@@ -145,7 +152,7 @@ impl StartGG {
             ).unwrap();
 
             // I uh... used to think Cow stood for "Co OWned". TIL its basically a glorified Option Variant
-            let tournament_progress_bar = ProgressBar::new(r["data"]["tournaments"]["nodes"].members().len() as u64).with_style(ProgressStyle::default_bar()).with_style(ProgressStyle::with_template("[{elapsed_precise}] {msg:50} {bar:40.blue} [{pos:>7}/{len:7}]").unwrap());
+            let tournament_progress_bar = ProgressBar::new(r["data"]["tournaments"]["nodes"].members().len() as u64).with_style(ProgressStyle::default_bar()).with_style(ProgressStyle::with_template("[{elapsed_precise}] {msg:70} {bar:40.blue} [{pos:>7}/{len:7}]").unwrap());
             
             for tournament in r["data"]["tournaments"]["nodes"].members() {
                 let id = tournament["id"].as_i64().unwrap();
@@ -164,10 +171,9 @@ impl StartGG {
                 tournament_progress_bar.inc(1);
             }
 
-            tournament_progress_bar.finish_with_message("Done!");
-            tournament_progress_bar.finish_and_clear();
+            tournament_progress_bar.finish_with_message("Finished Pulling information tournaments");
         }
-
+        
         v
     }
 
@@ -208,7 +214,6 @@ impl StartGG {
             // event_progress_bar.set_message(format!("Reading from event {id}"));
             
             if event["state"].as_str().unwrap() != "COMPLETED" {
-                // event_progress_bar.inc(1);
                 continue;
             }
 
@@ -239,6 +244,7 @@ impl StartGG {
         let mut v:Vec<TournamentSet> = Vec::with_capacity(128);
 
         let page_amount = self.get_event_set_page_amount(event_id).await;
+
         // let set_page_progress_bar = ProgressBar::new(page_amount as u64).with_style(ProgressStyle::default_bar()).with_style(ProgressStyle::default_bar()).with_style(ProgressStyle::with_template("[{elapsed_precise}] {msg:50} {bar:40.blue} [{pos:>7}/{len:7}]").unwrap());
 
         for page in 1..page_amount+1 {
@@ -266,7 +272,7 @@ impl StartGG {
             .as_str())
             .unwrap();
 
-            // let set_progress_bar = ProgressBar::new(r["data"]["event"]["sets"]["nodes"].members().len() as u64).with_style(ProgressStyle::default_bar()).with_style(ProgressStyle::with_template("[{elapsed_precise}] {msg:50} {bar:40.blue} [{pos:>7}/{len:7}]").unwrap());
+            
 
             for set in r["data"]["event"]["sets"]["nodes"].members() {
                 
@@ -310,13 +316,7 @@ impl StartGG {
                     }
                 );
             }
-
-            // set_progress_bar.finish_with_message(format!("Finished reading set page {page}"));
-            // set_progress_bar.finish_and_clear();
         }
-
-        // set_page_progress_bar.finish_with_message(format!("Finished reading sets from {event_id}"));
-        // set_page_progress_bar.finish_and_clear();
 
         v
     }

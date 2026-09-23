@@ -8,3 +8,5 @@ pub const STARTGG_WAIT_TIME:Duration = Duration::from_secs(60);
 
 
 pub const STARTGG_URL:&'static str = "https://api.start.gg/gql/alpha";
+
+pub const INDEX_HTML_PAGE:&'static str = "/home/Diya/Documents/GitHub/FateRank/startgg-interactions/index.html";
