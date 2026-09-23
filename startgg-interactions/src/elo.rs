@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use skillratings::{Outcomes, glicko2::{Glicko2Rating, glicko2}};
 
-use crate::{constants::GLICKO2_CONFIG, startgg::TournamentSet};
+use crate::{constants::GLICKO2_CONFIG, startgg_v2::TournamentSet, };
 
 #[derive(Clone, Copy)]
 pub struct Confidence(pub i64);
@@ -44,7 +44,7 @@ impl Elo {
             t.standings[1].score - t.standings[0].score
         );
 
-        println!("{} - {} Score Difference: {repeat_count}",t.standings[0].id,t.standings[1].id);
+        // println!("{} - {} Score Difference: {repeat_count}",t.standings[0].id,t.standings[1].id);
 
         if t.standings[0].has_won {
             outcome = Outcomes::WIN;

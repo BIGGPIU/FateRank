@@ -1,6 +1,4 @@
-use crate::startgg::{TournamentSet, TournamentSetStanding};
-
-
+use crate::startgg_v2::{TournamentSet, TournamentSetStanding};
 
 
 pub struct IgnoredSet {
