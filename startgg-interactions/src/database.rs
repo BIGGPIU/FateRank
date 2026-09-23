@@ -60,10 +60,10 @@ impl Database {
                 let sql;
                 
                 if set.standings[0].score > set.standings[1].score {
-                    sql = "INSERT INTO ChallongeSets (winner_name,winner_id,winner_score,loser_name,loser_id,loser_score) VALUES ($1,$2,$3,$4,$5,$6)"
+                    sql = "INSERT INTO ChallongeSets (winner_name,winner_id,winner_score,loser_name,loser_id,loser_score,tournament_slug) VALUES ($1,$2,$3,$4,$5,$6,$7)"
                 }
                 else {
-                    sql = "INSERT INTO ChallongeSets (winner_name,winner_id,winner_score,loser_name,loser_id,loser_score) VALUES ($4,$5,$6,$1,$2,$3)"
+                    sql = "INSERT INTO ChallongeSets (winner_name,winner_id,winner_score,loser_name,loser_id,tournament_slug) VALUES ($4,$5,$6,$1,$2,$3,$7)"
                 }
 
 
@@ -75,6 +75,7 @@ impl Database {
                 .bind(&set.standings[1].name)
                 .bind(&set.standings[1].id)
                 .bind(&set.standings[1].score)
+                .bind(&event.slug)
                 .execute(&self.pool)
                 .await
                 .unwrap();
@@ -97,9 +98,9 @@ impl Database {
             requests += 1; 
 
             if requests >= MAX_REQUESTS_PER_MINUTE {
-                println!("Sleeping to avoid rate limit...");
+                // println!("Sleeping to avoid rate limit...");
                 tokio::time::sleep(STARTGG_WAIT_TIME).await;
-                println!("done");
+                // println!("done");
                 requests = 0;
             }
 

@@ -12,7 +12,8 @@ pub struct Challonge {
 
 #[derive(Debug)]
 pub struct ChallongeTournamentEvent {
-    pub sets:Vec<ChallongeTournamentSet>
+    pub sets:Vec<ChallongeTournamentSet>,
+    pub slug:String,
 }
 
 #[derive(Debug)]
@@ -26,7 +27,7 @@ pub struct ChallongeTournamentSetStanding {
     // true if they won, false if they lost
     pub name:String,
     pub id:i64,
-    pub score:i64,
+    pub score:Option<i64>,
 }
 
 
@@ -70,7 +71,7 @@ impl Challonge {
 
                 self.driver.refresh().await.unwrap();
 
-                if let Some(x) = self.gather_tournament_page_information().await {
+                if let Some(x) = self.gather_tournament_page_information(i).await {
                     v.push(x);
                     
                     week_exists = true;
@@ -97,7 +98,7 @@ impl Challonge {
 
                 self.driver.refresh().await.unwrap();
 
-                if let Some(x) = self.gather_tournament_page_information().await {
+                if let Some(x) = self.gather_tournament_page_information(i).await {
                     v.push(x);
 
                     week_exists = true;
@@ -111,7 +112,7 @@ impl Challonge {
                 break;
             }
         }
-        
+
         v
     }
 
@@ -128,7 +129,7 @@ impl Challonge {
     }
     
     /// page: the tournametn you want to navigatae to without the /
-    async fn gather_tournament_page_information(&mut self) -> Option<ChallongeTournamentEvent> {
+    async fn gather_tournament_page_information(&mut self,link:String) -> Option<ChallongeTournamentEvent> {
         // HEY YOU! DID YOU COME HERE BECAUSE YOU CTRL+CLICKED AN ERROR?
         // MAKE SURE YOU'RE IN startgg-interactions AND RUN LIVE SERVER!
         self.driver.goto(format!("http://127.0.0.1:5500")).await.unwrap();
@@ -152,7 +153,6 @@ impl Challonge {
             // println!("{:?}",i.attr("data-match-id").await.unwrap());
             let mut sets:Vec<ChallongeTournamentSetStanding> = vec![];
             let set_parent = i.find(By::Tag("g")).await.unwrap();
-            let mut is_bad_data = false;
 
             
 
@@ -167,11 +167,9 @@ impl Challonge {
                     .unwrap()
                     .parse::<i64>()
                      {
-                        Ok(x) => x,
+                        Ok(x) => Some(x),
                         Err(_) => {
-                            println!("Bad Challonge set data detected.");
-                            is_bad_data = true;
-                            break;
+                            None
                         },
                     };
                 
@@ -222,17 +220,17 @@ impl Challonge {
                 })
             }
 
-            if !is_bad_data {
-                tournament_sets.push(
-                    ChallongeTournamentSet { standings: [sets[0].clone(),sets[1].clone()] }
-                );
-            }
+            
+            tournament_sets.push(
+                ChallongeTournamentSet { standings: [sets[0].clone(),sets[1].clone()] }
+            );
+        
 
         }
 
 
         Some(
-            ChallongeTournamentEvent { sets: tournament_sets }
+            ChallongeTournamentEvent { sets: tournament_sets, slug: link }
         )
     }
 }

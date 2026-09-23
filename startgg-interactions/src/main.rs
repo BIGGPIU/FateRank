@@ -24,6 +24,9 @@ async fn main() {
     
     let all_challonge_tournaments = challonge.get_tournaments().await;
 
+    // to close the window
+    drop(challonge);
+
     db.update_challonge_set_information(all_challonge_tournaments).await;
 
     let x = client.get_all_tournaments().await;

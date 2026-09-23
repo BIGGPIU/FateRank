@@ -1,5 +1,4 @@
 pub mod challonge_tournaments;
-mod auth;
 pub mod challonge;
 
 
