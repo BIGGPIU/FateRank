@@ -12,6 +12,10 @@ impl Confidence {
         Confidence(0)
     }
 
+    pub fn from(v:i64) -> Self {
+        Confidence(v)
+    }
+
     #[inline]
     pub fn update(&self) -> Confidence {
         if self.0 != 100 {
