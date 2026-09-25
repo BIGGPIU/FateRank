@@ -1,7 +1,7 @@
 use crate::{challonge::challonge::Challonge, database::Database, elo::Elo, startgg_v2::StartGG,};
 
 
-
+#[deny(non_camel_case_types)]
 
 mod constants;
 mod json_structs;
@@ -27,7 +27,7 @@ async fn main() {
     // to close the window
     drop(challonge);
 
-    db.update_challonge_set_information(all_challonge_tournaments).await;
+    db.update_challonge_set_information(&all_challonge_tournaments).await;
 
     let x = client.get_all_tournaments().await;
 
@@ -45,6 +45,11 @@ async fn main() {
     db.commit_glicko_information(&elo).await;    
 
     db.update_with_startgg_information(&mut client, &elo).await;
+    
+    for event in all_challonge_tournaments {
+        db.update_elo_based_off_challonge_info(event).await;
+    }
+
 
     println!("Done pulling information. Thank you for using FateRank!");
 }

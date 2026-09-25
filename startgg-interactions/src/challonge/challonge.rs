@@ -1,6 +1,7 @@
 
-use std::io::Write;
+use std::{io::Write, time::Duration};
 
+use indicatif::{ProgressBar, ProgressStyle};
 use thirtyfour::{By, DesiredCapabilities, WebDriver, common::capabilities::firefox::FirefoxPreferences, extensions::query::ElementQueryable};
 use crate::challonge::challonge_tournaments::{ChallongeTournament, HouseOfCasuals, WeeklyRebelRumble} ;
 
@@ -27,12 +28,13 @@ pub struct ChallongeTournamentSetStanding {
     // true if they won, false if they lost
     pub name:String,
     pub id:i64,
-    pub score:Option<i64>,
+    pub score:i64,
 }
 
 
 impl Challonge {
     pub async fn new() -> Self {
+
         Self {
             driver: WebDriver::managed(DesiredCapabilities::firefox()).await.unwrap()
         }
@@ -42,17 +44,18 @@ impl Challonge {
     pub async fn get_tournaments(&mut self) -> Vec<ChallongeTournamentEvent> {
         // get weekly rumble tournaments
         
-        // let link_name = WeeklyRebelRumble::get_possible_event_names(0)[2].clone();
+        // let link_name = WeeklyRebelRumble::get_possible_event_names(0)[1].clone();
 
         // Challonge::generate_html_file(&link_name);
 
-        // if let Some(x) = self.gather_tournament_page_information(WeeklyRebelRumble::get_possible_event_names(0)[1].clone()).await {
+        // if let Some(x) = self.gather_tournament_page_information(link_name).await {
         //     println!("OK");
         // }
         // else {
         //     panic!("NG :(");
         // }
 
+        println!("Pulling challonge tournaments..");
 
         let mut v:Vec<ChallongeTournamentEvent> = Vec::new();
         let mut index: i64 = 0;
@@ -135,8 +138,6 @@ impl Challonge {
         self.driver.goto(format!("http://127.0.0.1:5500")).await.unwrap();
         self.driver.enter_frame(0).await.unwrap();
 
-        // println!("{link:?}");
-
         let tournament_match_elements =self
         .driver
         .query(By::ClassName("-complete"))
@@ -148,6 +149,7 @@ impl Challonge {
         }
 
         let mut tournament_sets:Vec<ChallongeTournamentSet> = vec![];
+        let mut throw_away_entire_tournament = false;
 
         for i in tournament_match_elements {
             // println!("{:?}",i.attr("data-match-id").await.unwrap());
@@ -166,36 +168,31 @@ impl Challonge {
                     .await
                     .unwrap()
                     .parse::<i64>()
-                     {
-                        Ok(x) => Some(x),
-                        Err(_) => {
-                            None
+                    {
+                        Ok(x) => x,
+                        Err(e) => {
+                            // if this errors just throw away the entire tournament
+
+                            let x = match set.find(By::ClassName("match--player-score"))
+                            .await
+                            .unwrap()
+                            .inner_html()
+                            .await
+                            .unwrap()
+                            .parse::<i64>()
+                                {
+                                    Ok(x) => {
+                                        x
+                                    },
+                                    Err(_) => {
+                                        throw_away_entire_tournament = true;
+                                        break;
+                                    },
+                                };
+
+                            x
                         },
                     };
-                
-                // println!("{}\n\n",set.inner_html().await.unwrap());
-
-                // println!("{} {}",
-                // set
-                //     .attr("data-participant-id")
-                //     .await
-                //     .unwrap()
-                //     .unwrap()
-                //     .parse::<i64>()
-                //     .unwrap(),
-                //     set
-                //     // /html/body/div[1]/div[2]/div/div[1]/div/div/div/div/div/svg/g/g[2]/g[8]/g/svg[2]/text[3]
-                //     .find(By::ClassName("match--player-score"))
-                //     .await
-                //     .unwrap()
-                //     .text()
-                //     .await
-                //     .unwrap()
-                // );
-
-                // for dave in set.find_all(By::Tag("text")).await.unwrap() {
-                //     println!("{:?}",dave.class_name().await.unwrap_or(Some("UNKOWN".to_string())));
-                // }
 
                 sets.push(ChallongeTournamentSetStanding {
                     id: set
@@ -220,17 +217,33 @@ impl Challonge {
                 })
             }
 
+            if sets.len() == 0 {
+                // because challonge lets you do this for some reason
+
+            }
+            else if sets[0].score == 0 && sets[0].score == 0 {
+
+            }
+            else {
+                tournament_sets.push(
+                    ChallongeTournamentSet { standings: [sets[0].clone(),sets[1].clone()] }
+                );
+            }
+
             
-            tournament_sets.push(
-                ChallongeTournamentSet { standings: [sets[0].clone(),sets[1].clone()] }
-            );
+            
         
 
         }
 
 
-        Some(
-            ChallongeTournamentEvent { sets: tournament_sets, slug: link }
-        )
+        if !throw_away_entire_tournament {
+            Some(
+                ChallongeTournamentEvent { sets: tournament_sets, slug: link }
+            )
+        }
+        else {
+            None
+        }
     }
 }
