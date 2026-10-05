@@ -23,6 +23,7 @@ impl Database {
         
         Database::clear_user_db(&pool).await;
         Database::clear_challonge_sets_db(&pool).await;
+        Database::clear_startgg_sets_db(&pool).await;
 
 
         return Self {
@@ -67,6 +68,14 @@ impl Database {
     async fn clear_challonge_sets_db(pool:&Pool<Sqlite>) {
         sqlx::query::<Sqlite>
         ("DELETE FROM ChallongeSets")
+        .execute(pool)
+        .await
+        .unwrap();
+    }
+
+    async fn clear_startgg_sets_db(pool:&Pool<Sqlite>) {
+        sqlx::query::<Sqlite>
+        ("DELETE FROM StartggSets")
         .execute(pool)
         .await
         .unwrap();
