@@ -20,9 +20,11 @@ async fn main() {
     let mut challonge = Challonge::new().await;
     let mut elo = Elo::new();
     
+
+    let challonge_hints = Database::load_challonge_event_cache("/home/Diya/Documents/GitHub/FateRank/database/db.sqlite").await;
     let db = Database::new("/home/Diya/Documents/GitHub/FateRank/database/db.sqlite").await;
     
-    let all_challonge_tournaments = challonge.get_tournaments().await;
+    let all_challonge_tournaments = challonge.get_tournaments(&challonge_hints).await;
 
     // to close the window
     drop(challonge);
@@ -32,10 +34,11 @@ async fn main() {
     let x = client.get_all_tournaments().await;
 
 
-    for i in &x {
-        for ii in &i.tournament_events {
-            for iii in &ii.sets {
-                elo.update_player_elo(&iii);
+    for tournament in &x {
+        for event in &tournament.tournament_events {
+            for set in &event.sets {
+                db.update_startgg_set_information(set, event, tournament).await;
+                elo.update_player_elo(&set);
             }
         }
     }

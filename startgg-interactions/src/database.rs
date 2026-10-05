@@ -2,7 +2,7 @@ use indicatif::{ProgressBar, ProgressStyle};
 use skillratings::glicko2::{Glicko2, Glicko2Rating, glicko2};
 use sqlx::{Pool, Row, Sqlite, SqlitePool};
 
-use crate::{challonge::challonge::ChallongeTournamentEvent, constants::{GLICKO2_CONFIG, MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, elo::{Confidence, Elo}, startgg_v2::StartGG,};
+use crate::{challonge::challonge::ChallongeTournamentEvent, constants::{GLICKO2_CONFIG, MAX_REQUESTS_PER_MINUTE, STARTGG_WAIT_TIME}, elo::{Confidence, Elo}, startgg_v2::{StartGG, Tournament, TournamentEvent, TournamentSet},};
 
 pub struct Database {
     pool:Pool<Sqlite>
@@ -23,6 +23,7 @@ impl Database {
         
         Database::clear_user_db(&pool).await;
         Database::clear_challonge_sets_db(&pool).await;
+        Database::clear_startgg_sets_db(&pool).await;
 
 
         return Self {
@@ -30,6 +31,32 @@ impl Database {
         }
     }
 
+    /// gets all the challonge event names, use this before you initialize the database or you're going to get a list with a grand total of
+    /// NOTHING.
+    pub async fn load_challonge_event_cache(database_location:&str) -> Vec<String> {
+        let temp_pool = SqlitePool::connect(database_location).await.unwrap();
+
+        let x = sqlx::query::<Sqlite>
+        ("SELECT DISTINCT tournament_slug FROM ChallongeSets")
+        .fetch_all(&temp_pool)
+        .await
+        .unwrap();
+
+        
+        return 
+        x
+        .iter()
+        .map(
+            |x| {
+                x.get("tournament_slug")
+            }
+        )
+        .collect();
+    }
+
+
+    
+    
     async fn clear_user_db(pool:&Pool<Sqlite>) {
         sqlx::query::<Sqlite>
         ("DELETE FROM User")
@@ -41,6 +68,14 @@ impl Database {
     async fn clear_challonge_sets_db(pool:&Pool<Sqlite>) {
         sqlx::query::<Sqlite>
         ("DELETE FROM ChallongeSets")
+        .execute(pool)
+        .await
+        .unwrap();
+    }
+
+    async fn clear_startgg_sets_db(pool:&Pool<Sqlite>) {
+        sqlx::query::<Sqlite>
+        ("DELETE FROM StartggSets")
         .execute(pool)
         .await
         .unwrap();
@@ -61,6 +96,30 @@ impl Database {
             .unwrap();
         }
     } 
+
+    pub async fn update_startgg_set_information(&self, set:&TournamentSet,event:&TournamentEvent,tournament:&Tournament) {
+        let sql;
+
+        if set.standings[0].has_won {
+            sql = "INSERT INTO StartggSets (event_id,tournament_id,tournament_name,winner_id,winner_score,loser_id,loser_score) VALUES ($1,$2,$3,$4,$5,$6,$7)";
+        }
+        else {
+            sql = "INSERT INTO StartggSets (event_id,tournament_id,tournament_name,winner_id,winner_score,loser_id,loser_score) VALUES ($1,$2,$3,$6,$7,$4,$5)";
+        }
+
+        sqlx::query::<Sqlite>
+        (sql)
+        .bind(event.id)
+        .bind(tournament.id)
+        .bind(&tournament.tournament_name)
+        .bind(set.standings[0].id)
+        .bind(set.standings[0].score)
+        .bind(set.standings[1].id)
+        .bind(set.standings[1].score)
+        .execute(&self.pool)
+        .await
+        .unwrap();
+    }
 
     pub async fn update_challonge_set_information(&self, v:&Vec<ChallongeTournamentEvent>) {
         for event in v {
@@ -107,10 +166,11 @@ impl Database {
 
             if requests >= MAX_REQUESTS_PER_MINUTE {
                 rl_avoids -= 1;
-                user_information_progress_bar.set_message(format!("Fetching User Information (RateLimit avoids left: {})",rl_avoids));
                 // println!("Sleeping to avoid rate limit...");
+                user_information_progress_bar.set_message(format!("Fetching User Information (Sleeping...)"));
                 tokio::time::sleep(STARTGG_WAIT_TIME).await;
                 // println!("done");
+                user_information_progress_bar.set_message(format!("Fetching User Information (RateLimit avoids left: {})",rl_avoids));
                 requests = 0;
             }
 

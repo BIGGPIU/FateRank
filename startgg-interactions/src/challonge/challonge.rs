@@ -40,8 +40,11 @@ impl Challonge {
         }
     }
 
-    
-    pub async fn get_tournaments(&mut self) -> Vec<ChallongeTournamentEvent> {
+
+    /// hints: A list of possible tournament names, saves a ton of time because you don't have to check every single tournament name 
+    /// 
+    /// 
+    pub async fn get_tournaments(&mut self, hints:&Vec<String>) -> Vec<ChallongeTournamentEvent> {
         // get weekly rumble tournaments
         
         // let link_name = WeeklyRebelRumble::get_possible_event_names(0)[1].clone();
@@ -62,23 +65,35 @@ impl Challonge {
         loop {
             // println!("Cheking week {index}");
             let mut week_exists = false;
+            let possible_names = WeeklyRebelRumble::get_possible_event_names(index); 
             
             if WeeklyRebelRumble::is_skipped_week(index) {
                 index += 1;
                 continue;
             }
 
-            for i in WeeklyRebelRumble::get_possible_event_names(index) {
-
-                Challonge::generate_html_file(&i);
+            if let Some(x) = WeeklyRebelRumble::has_hint(index, &hints) {
+                Challonge::generate_html_file(&x);
 
                 self.driver.refresh().await.unwrap();
+                // OK unwrap because if its in the database then we've already gathered the data once before. 
+                let y = self.gather_tournament_page_information(x).await.unwrap();
 
-                if let Some(x) = self.gather_tournament_page_information(i).await {
-                    v.push(x);
-                    
-                    week_exists = true;
-                    break;
+                v.push(y);
+                week_exists = true;
+            }
+            else {
+                for i in possible_names {
+                    Challonge::generate_html_file(&i);
+    
+                    self.driver.refresh().await.unwrap();
+    
+                    if let Some(x) = self.gather_tournament_page_information(i).await {
+                        v.push(x);
+                        
+                        week_exists = true;
+                        break;
+                    }
                 }
             }
         
