@@ -15,6 +15,8 @@ pub trait ChallongeTournament {
     /// index: what week after the first one do you want to search for? SHOULD NOT BE NEGATIVE. ISNT A U64 BECAUSE IM DUM AND DUM AND STUPID!
     fn get_possible_event_names(index:i64) -> Vec<String>;
 
+    fn has_hint(index:i64,hints:&Vec<String>) -> Option<String>;
+
     fn get_first_week() -> i64;
 }
 
@@ -23,6 +25,8 @@ pub struct WeeklyRebelRumble {
 }
 
 impl WeeklyRebelRumble {
+    
+
     pub fn is_skipped_week(index:i64) -> bool {
         match index + 32 as i64 {
             46 => {
@@ -50,6 +54,19 @@ impl ChallongeTournament for WeeklyRebelRumble {
         ]
     }
 
+    /// checks if theres a hint for any of the possible tournament names 
+    fn has_hint(index:i64,hints:&Vec<String>) -> Option<String> {
+        let possible_event_names = WeeklyRebelRumble::get_possible_event_names(index);
+
+        for i in possible_event_names {
+            if hints.contains(&i) {
+                return Some(i)
+            }
+        }
+
+        None
+    }
+
     fn get_first_week() -> i64 {
         32
     }
@@ -68,6 +85,19 @@ impl ChallongeTournament for HouseOfCasuals {
         vec![
             format!("houseofcasuals{}",first_week+index)
         ]
+    }
+
+    /// checks if theres a hint for any of the possible tournament names 
+    fn has_hint(index:i64,hints:&Vec<String>) -> Option<String> {
+        let possible_event_names = HouseOfCasuals::get_possible_event_names(index);
+
+        for i in possible_event_names {
+            if hints.contains(&i) {
+                return Some(i)
+            }
+        }
+
+        None
     }
 
     fn get_first_week() -> i64 {

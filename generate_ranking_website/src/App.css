@@ -182,3 +182,15 @@
     border-right-color: var(--border);
   }
 }
+
+
+@keyframes marquee {
+  0%   { transform: translate(200%, 0); }
+  100% { transform: translate(-200%, 0); }
+}
+
+
+.marquee {
+    animation: marquee 60s linear infinite;
+    animation-delay: 500ms;
+}

@@ -296,8 +296,13 @@ impl StartGG {
                 if let None = set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64() {
                     continue;
                 }
+                
+                let player_1_score = set["slots"][0]["standing"]["stats"]["score"]["value"].as_i64().unwrap();
+                let player_2_score = set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64().unwrap();
 
-
+                if player_1_score != 3 && player_2_score != 3 {
+                    continue;
+                }
 
                 v.push(
                     TournamentSet {
@@ -305,12 +310,12 @@ impl StartGG {
                             TournamentSetStanding {
                                 id: set["slots"][0]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64().unwrap(),
                                 has_won: set["slots"][0]["standing"]["placement"].as_i64().unwrap() == 1,
-                                score: set["slots"][0]["standing"]["stats"]["score"]["value"].as_i64().unwrap(),
+                                score: player_1_score,
                             },
                             TournamentSetStanding {
                                 id: set["slots"][1]["standing"]["entrant"]["participants"][0]["user"]["id"].as_i64().unwrap(),
                                 has_won: set["slots"][1]["standing"]["placement"].as_i64().unwrap() == 1,
-                                score: set["slots"][1]["standing"]["stats"]["score"]["value"].as_i64().unwrap(),
+                                score: player_2_score,
                             }
                         ],
                     }
