@@ -207,7 +207,7 @@ function PlayerStatsWindow(
 
     if (rating_list_item) {
         return (
-            <div className='absolute w-[1920px] h-270 bg-black text-white' id='background'>
+            <div className='absolute w-[1920px] h-270 bg-black text-white overflow-x-hidden overflow-y-hidden' id='background'>
                 {/* Sponsored eckes dee */}
                 <div className='absolute w-full h-fit text-xl text-nowrap marquee -translate-x-1/1 z-10' id='advertisement'>
                     THIS TOURNAMENT WAS BROUGHT TO YOU WITH SUPPORT FROM FATERANK. USE FATERANK TODAY AT biggpiu.github.io/FateRank
